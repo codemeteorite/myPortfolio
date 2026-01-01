@@ -1,94 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Mohd Yahiya | Full Stack Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<title>Mohd Yahiya | Full Stack Developer</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 
-<body class="bg-slate-950 text-white">
+<body class="bg-black text-white overflow-x-hidden">
 
-<!-- HERO -->
-<section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
-  <h1 class="text-5xl font-bold">Mohd Yahiya</h1>
-  <p class="mt-3 text-xl text-slate-400">Full Stack Web Developer</p>
-  <p class="mt-4 text-lg">I build clean, modern web experiences.</p>
-  <p class="mt-6 italic text-sky-400">"Code. Eat. Repeat."</p>
+<!-- Loader -->
+<div id="loader" class="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
+  <p class="text-3xl font-bold text-teal-400 animate-pulse">Loading Portfolio</p>
+</div>
 
-  <div class="mt-8 flex gap-4">
-    <a href="#projects" class="px-6 py-3 bg-sky-500 rounded-xl text-black font-semibold">View Projects</a>
-    <a href="#contact" class="px-6 py-3 border border-sky-500 rounded-xl">Contact</a>
+<!-- Navbar -->
+<nav class="fixed top-0 w-full z-50 backdrop-blur bg-black/40 border-b border-white/10">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+    <h1 class="font-bold">Mohd Yahiya</h1>
+    <div class="flex gap-6 text-sm">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="./Yahiyas_Resume.pdf" download class="border border-teal-400 px-3 py-1 rounded">
+        View Resume
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero flex items-center justify-center text-center">
+  <div class="bg-black/60 p-12 rounded-xl backdrop-blur reveal">
+    <h1 class="text-5xl font-extrabold">Mohd Yahiya</h1>
+    <p class="mt-3 text-gray-300">Full Stack Developer</p>
+    <p class="mt-4 italic text-teal-400">"Code. Eat. Repeat."</p>
+    <div class="mt-6 flex gap-4 justify-center">
+      <a href="./Yahiyas_Resume.pdf" download class="bg-teal-400 text-black px-6 py-2 rounded">View Resume</a>
+      <a href="#projects" class="border border-teal-400 px-6 py-2 rounded">View Projects</a>
+    </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="max-w-5xl mx-auto px-6 py-24 text-center">
-  <h2 class="text-4xl font-bold mb-6">About Me</h2>
-  <p class="text-slate-300 leading-relaxed">
-    I'm a passionate full-stack developer driven by curiosity and consistency — over 500 days of continuous coding.
-    I love building intuitive interfaces and writing clean, maintainable code.
-    Late nights, chai, football, travel and endless learning fuel my journey.
+<!-- About -->
+<section id="about" class="py-24 px-6 text-center reveal">
+  <h2 class="text-3xl font-bold mb-6">About Me</h2>
+  <p class="max-w-3xl mx-auto text-gray-300">
+    Passionate full-stack developer with 500+ hours of coding and a 500+ day coding streak.
+    Obsessed with building clean systems and beautiful interfaces.
   </p>
 </section>
 
-<!-- ACHIEVEMENTS -->
-<section class="bg-slate-900 py-20">
-  <h2 class="text-center text-4xl font-bold mb-12">Achievements</h2>
-  <div class="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto px-6">
-    <div class="bg-slate-800 p-6 rounded-xl text-center">500-Day Coding Streak</div>
-    <div class="bg-slate-800 p-6 rounded-xl text-center">500+ Hours Coding</div>
-    <div class="bg-slate-800 p-6 rounded-xl text-center">Frontend Specialist</div>
-    <div class="bg-slate-800 p-6 rounded-xl text-center">Late-Night Coder</div>
+<!-- Skills -->
+<section id="skills" class="py-24 px-6 text-center reveal">
+  <h2 class="text-3xl font-bold mb-10">Skills</h2>
+  <div class="flex justify-center gap-8 flex-wrap text-6xl text-teal-400">
+    <i class="devicon-react-original"></i>
+    <i class="devicon-nodejs-plain"></i>
+    <i class="devicon-mongodb-plain"></i>
+    <i class="devicon-mysql-plain"></i>
+    <i class="devicon-express-original"></i>
+    <i class="devicon-tailwindcss-plain"></i>
+    <i class="devicon-bootstrap-plain"></i>
+    <i class="devicon-html5-plain"></i>
+    <i class="devicon-css3-plain"></i>
   </div>
 </section>
 
-<!-- TECH STACK -->
-<section class="py-20 text-center px-6">
-  <h2 class="text-4xl font-bold mb-8">Tech Stack</h2>
-  <p class="text-slate-400">HTML • CSS • JavaScript • React • Node • MongoDB • Python • C++ • Tailwind • AWS • Bootstrap • GitHub</p>
+<!-- Experience -->
+<section id="experience" class="py-28 px-6 text-center reveal">
+  <h2 class="text-4xl font-bold mb-14">Experience</h2>
+
+  <div class="max-w-5xl mx-auto space-y-10 text-left">
+
+    <div class="glass p-8">
+      <div class="flex justify-between mb-4">
+        <h3 class="text-xl font-semibold">Software Development — Internship</h3>
+        <span class="text-teal-400 text-sm">Apr 2025 – Oct 2025</span>
+      </div>
+      <p class="text-gray-400 mb-2">Li2, Hyderabad</p>
+      <p class="text-gray-300">
+        Team Lead & Outreach Manager, managing execution, customers and stakeholders in fast-paced projects.
+      </p>
+    </div>
+
+    <div class="glass p-8">
+      <div class="flex justify-between mb-4">
+        <h3 class="text-xl font-semibold">ReactJS Development — Internship</h3>
+        <span class="text-teal-400 text-sm">Sep 2024 – Feb 2025</span>
+      </div>
+      <p class="text-gray-400 mb-2">Hexart, Hyderabad</p>
+      <p class="text-gray-300">
+        Associate Web Developer on 4+ production apps, fixed 50+ bugs, optimized performance.
+      </p>
+    </div>
+
+    <div class="glass p-8">
+      <div class="flex justify-between mb-4">
+        <h3 class="text-xl font-semibold">Teaching Assistant — Internship</h3>
+        <span class="text-teal-400 text-sm">Jul 2024 – Sep 2024</span>
+      </div>
+      <p class="text-gray-400 mb-2">NxtWave, Virtual</p>
+      <p class="text-gray-300">
+        Mentored learners and strengthened communication & leadership skills.
+      </p>
+    </div>
+
+  </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="bg-slate-900 py-24">
-  <h2 class="text-center text-4xl font-bold mb-12">Projects</h2>
-  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 px-6">
-    <div class="bg-slate-800 p-6 rounded-xl">
-      <h3 class="text-xl font-semibold mb-2">Digital Footprints</h3>
-      <p class="text-slate-400">Digital presence tracking platform with modern UI/UX.</p>
+<section id="projects" class="py-32 px-6 reveal bg-gradient-to-b from-black via-slate-950 to-black">
+  <h2 class="text-4xl font-bold text-center mb-16">Projects</h2>
+
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
+
+    <!-- Card -->
+    <div class="group relative rounded-3xl p-[1px] bg-gradient-to-br from-teal-400/40 to-cyan-500/20 hover:scale-[1.03] transition">
+      <div class="rounded-3xl bg-slate-950 p-8 h-full flex flex-col justify-between shadow-2xl">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Digital Footprints</h3>
+          <p class="text-gray-400 mb-6">Full-stack blogging platform with real-time features</p>
+
+          <div class="flex gap-4 text-3xl text-teal-400 mb-8">
+            <i class="devicon-react-original"></i>
+            <i class="devicon-nodejs-plain"></i>
+            <i class="devicon-mongodb-plain"></i>
+            <i class="devicon-tailwindcss-plain"></i>
+          </div>
+        </div>
+
+        <a href="https://github.com/codemeteorite/DigitalFootprints" target="_blank"
+           class="inline-flex items-center gap-2 text-teal-400 font-medium group-hover:text-white transition">
+          View GitHub
+          <span class="group-hover:translate-x-1 transition">→</span>
+        </a>
+      </div>
     </div>
-    <div class="bg-slate-800 p-6 rounded-xl">
-      <h3 class="text-xl font-semibold mb-2">BMW Website Clone</h3>
-      <p class="text-slate-400">First major frontend project built from scratch.</p>
+
+    <!-- Card -->
+    <div class="group relative rounded-3xl p-[1px] bg-gradient-to-br from-teal-400/40 to-cyan-500/20 hover:scale-[1.03] transition">
+      <div class="rounded-3xl bg-slate-950 p-8 h-full flex flex-col justify-between shadow-2xl">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Simon Says Game</h3>
+          <p class="text-gray-400 mb-6">Classic memory challenge with smooth UI</p>
+
+          <div class="flex gap-4 text-3xl text-teal-400 mb-8">
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-html5-plain"></i>
+            <i class="devicon-css3-plain"></i>
+          </div>
+        </div>
+
+        <a href="https://simonsaysdev.netlify.app/" target="_blank"
+           class="inline-flex items-center gap-2 text-teal-400 font-medium group-hover:text-white transition">
+          Live Demo
+          <span class="group-hover:translate-x-1 transition">→</span>
+        </a>
+      </div>
     </div>
+
+    <!-- Card -->
+    <div class="group relative rounded-3xl p-[1px] bg-gradient-to-br from-teal-400/40 to-cyan-500/20 hover:scale-[1.03] transition">
+      <div class="rounded-3xl bg-slate-950 p-8 h-full flex flex-col justify-between shadow-2xl">
+        <div>
+          <h3 class="text-2xl font-semibold mb-2">Typing Speed Detector</h3>
+          <p class="text-gray-400 mb-6">Train speed & accuracy with interactive UI</p>
+
+          <div class="flex gap-4 text-3xl text-teal-400 mb-8">
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-html5-plain"></i>
+            <i class="devicon-css3-plain"></i>
+          </div>
+        </div>
+
+        <a href="https://typemasters.ccbp.tech/" target="_blank"
+           class="inline-flex items-center gap-2 text-teal-400 font-medium group-hover:text-white transition">
+          Live Demo
+          <span class="group-hover:translate-x-1 transition">→</span>
+        </a>
+      </div>
+    </div>
+
   </div>
 </section>
-
-<!-- JOURNEY -->
-<section class="py-24 text-center px-6">
-  <h2 class="text-4xl font-bold mb-4">My Journey in Pictures</h2>
-  <p class="text-slate-400 mb-12">"Moments that made it all worth it."</p>
-
-  <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-    <img class="rounded-xl shadow-xl" src="https://i.postimg.cc/pdjqJCTt/Whats-App-Image-2025-12-03-at-02-18-31-3eff50a5.jpg">
-    <img class="rounded-xl shadow-xl" src="https://i.postimg.cc/pLzsDky2/image.png">
-    <img class="rounded-xl shadow-xl" src="https://i.postimg.cc/gcHt7gKw/Whats-App-Image-2025-12-03-at-02-22-15-808053b4.jpg">
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="bg-slate-900 py-24 text-center">
+<!-- Contact -->
+<section id="contact" class="py-32 px-6 text-center reveal bg-gradient-to-t from-black via-slate-950 to-black">
   <h2 class="text-4xl font-bold mb-6">Get In Touch</h2>
-  <p class="text-slate-400 mb-6">yahiya3059@gmail.com</p>
 
-  <div class="flex justify-center gap-6">
-    <a href="https://github.com/YOUR_GITHUB" class="text-sky-400">GitHub</a>
-    <a href="https://instagram.com/YOUR_INSTAGRAM" class="text-sky-400">Instagram</a>
-    <a href="https://facebook.com/YOUR_FACEBOOK" class="text-sky-400">Facebook</a>
+  <p class="text-gray-300 mb-10 text-lg select-all">
+    <a href="mailto:yahiya3059@gmail.com" class="hover:text-teal-400 transition">
+      yahiya3059@gmail.com
+    </a>
+  </p>
+
+  <div class="flex justify-center gap-12 text-teal-400 text-3xl">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/johntheshawarmaboy/" target="_blank"
+       class="group transition transform hover:scale-125">
+      <i class="fa-brands fa-instagram group-hover:text-pink-400 transition"></i>
+    </a>
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/yahiyamohd/" target="_blank"
+       class="group transition transform hover:scale-125">
+      <i class="fa-brands fa-linkedin group-hover:text-sky-400 transition"></i>
+    </a>
+
+    <!-- GitHub -->
+    <a href="https://github.com/codemeteorite" target="_blank"
+       class="group transition transform hover:scale-125">
+      <i class="fa-brands fa-github group-hover:text-white transition"></i>
+    </a>
+
   </div>
+
+  <p class="mt-10 text-sm text-gray-500">
+    Let’s build something impactful.
+  </p>
 </section>
 
-<footer class="py-6 text-center text-slate-500">
-  © 2025 Mohd Yahiya
+<footer class="py-10 text-center text-gray-500">
+  Built with obsession by Mohd Yahiya
 </footer>
 
 </body>

@@ -1,0 +1,24 @@
+.hero {
+  background: 
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('./matrix-17974.gif') center/cover no-repeat;
+  min-height: 100vh;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1rem;
+}
