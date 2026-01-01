@@ -1,8 +1,13 @@
 // Loader
-window.addEventListener("load", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loader");
-  setTimeout(() => loader.style.opacity = "0", 600);
-  setTimeout(() => loader.remove(), 1400);
+
+  setTimeout(() => {
+    loader.style.transition = "opacity 0.6s ease";
+    loader.style.opacity = "0";
+  }, 300);
+
+  setTimeout(() => loader.remove(), 1000);
 });
 
 // Scroll reveal
