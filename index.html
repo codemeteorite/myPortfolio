@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Mohd Yahiya — Software Engineer | Full Stack Developer</title>
+  <title>Debug Yahiya — Software Engineer | Full Stack Developer</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -308,39 +308,30 @@
 
 
   <script>
+    console.log("Visitor script loaded");
+
     document.addEventListener("DOMContentLoaded", () => {
+      console.log("DOM loaded");
+
       const counterEl = document.getElementById("visitorCount");
-
-      const BASE_OFFSET = 50;
-
-      function animateCount(target) {
-        let current = 0;
-        const duration = 1400;
-        const stepTime = Math.max(Math.floor(duration / target), 18);
-
-        const timer = setInterval(() => {
-          current++;
-          counterEl.textContent = current.toLocaleString();
-
-          if (current >= target) {
-            clearInterval(timer);
-            counterEl.textContent = target.toLocaleString() + "+";
-          }
-        }, stepTime);
-      }
+      console.log("Counter element:", counterEl);
 
       fetch("https://visitor-counter-api-s46z.onrender.com/visitors")
-        .then(res => res.json())
-        .then(data => {
-          const realCount = parseInt(data.count) || 0;
-          const displayCount = realCount + BASE_OFFSET;
-          animateCount(displayCount);
+        .then(res => {
+          console.log("Fetch response:", res);
+          return res.json();
         })
-        .catch(() => {
-          counterEl.textContent = "—";
+        .then(data => {
+          console.log("API data:", data);
+          counterEl.textContent = data.count + "+";
+        })
+        .catch(err => {
+          console.error("Visitor error:", err);
+          counterEl.textContent = "ERR";
         });
     });
   </script>
+
 
 
 
