@@ -23,6 +23,22 @@ document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 const btn = document.getElementById("menuBtn");
 const menu = document.getElementById("mobileMenu");
 
-btn.addEventListener("click", () => {
+// Toggle on hamburger click
+btn.addEventListener("click", (e) => {
+  e.stopPropagation();
   menu.classList.toggle("hidden");
+});
+
+// Close when clicking a link
+document.querySelectorAll("#mobileMenu a").forEach(link => {
+  link.addEventListener("click", () => {
+    menu.classList.add("hidden");
+  });
+});
+
+// Close when clicking outside
+document.addEventListener("click", (e) => {
+  if (!menu.contains(e.target) && !btn.contains(e.target)) {
+    menu.classList.add("hidden");
+  }
 });
