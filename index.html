@@ -1,81 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mohd Yahiya — Full Stack Developer | MERN | Hyderabad</title>
+  <title>Mohd Yahiya — Software Engineer | Full Stack Developer</title>
 
-<meta name="description" content="Mohd Yahiya is a Full Stack Developer specializing in MERN Stack, JavaScript, React, Node.js, and scalable web applications. View portfolio, projects, and contact details.">
+  <meta name="description"
+    content="Mohd Yahiya is a Software Engineer and Full Stack Developer specializing in MERN stack, JavaScript, React, and scalable web applications. View projects and contact details.">
 
-<meta name="keywords" content="Mohd Yahiya, Yahiya Developer, Yahiya Portfolio, Full Stack Developer Hyderabad, MERN Developer, JavaScript Developer, React Developer, Node.js Developer">
+  <meta name="keywords"
+    content="Mohd Yahiya, Mohd Yahiya Engineer, Yahiya Engineer, Software Engineer Hyderabad, Full Stack Engineer, Yahiya Developer, Yahiya Portfolio, Full Stack Developer Hyderabad, MERN Developer, JavaScript Developer, React Developer, Node.js Developer">
 
-<meta name="author" content="Mohd Yahiya">
+  <meta name="author" content="Mohd Yahiya">
 
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css?v=4">
-<script src="script.js?v=4" defer></script>
+  <link rel="stylesheet" href="style.css?v=4">
+  <script src="script.js?v=4" defer></script>
 
 </head>
 
 <body class="bg-black text-white overflow-x-hidden">
 
-<!-- Loader -->
-<div id="loader" class="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
-  <p class="text-xl md:text-3xl font-bold text-teal-400 animate-pulse">Loading Portfolio</p>
-</div>
+  <!-- Loader -->
+  <div id="loader" class="fixed inset-0 bg-black z-[9999] flex items-center justify-center">
+    <p class="text-xl md:text-3xl font-bold text-teal-400 animate-pulse">Loading Portfolio</p>
+  </div>
 
-<!-- Navbar -->
-<nav class="fixed top-0 w-full z-50 backdrop-blur bg-black/40 border-b border-white/10">
-  <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
-    <h1 class="font-bold">Mohd Yahiya</h1>
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full z-50 backdrop-blur bg-black/40 border-b border-white/10">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+      <h1 class="font-bold">Mohd Yahiya</h1>
 
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex gap-6 text-sm">
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="https://drive.google.com/uc?export=download&id=1kUwiCmV5M0UqTaHsqPWexiFym6eZcTuh"
-        class="border border-teal-400 px-3 py-1 rounded">View Resume</a>
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="https://drive.google.com/uc?export=download&id=1kUwiCmV5M0UqTaHsqPWexiFym6eZcTuh"
+          class="border border-teal-400 px-3 py-1 rounded">View Resume</a>
+      </div>
+
+      <!-- Mobile Button -->
+      <button id="menuBtn" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </div>
 
-    <!-- Mobile Button -->
-    <button id="menuBtn" class="md:hidden text-2xl">
-      <i class="fa-solid fa-bars"></i>
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-black/95 px-6 pb-6 space-y-4 text-center">
-    <a href="#about" class="block">About</a>
-    <a href="#skills" class="block">Skills</a>
-    <a href="#experience" class="block">Experience</a>
-    <a href="#projects" class="block">Projects</a>
-    <a href="#contact" class="block">Contact</a>
-  </div>
-</nav>
-
-<!-- Hero -->
-<section class="hero flex items-center justify-center text-center px-6">
-  <div class="bg-black/60 p-8 md:p-12 rounded-xl backdrop-blur reveal max-w-xl">
-    <h1 class="text-3xl md:text-5xl font-extrabold">Mohd Yahiya</h1>
-    <p class="mt-3 text-gray-300">Full Stack Developer</p>
-    <p class="mt-4 italic text-teal-400">"Code. Eat. Repeat."</p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
-      <a  href="https://drive.google.com/uc?export=download&id=1kUwiCmV5M0UqTaHsqPWexiFym6eZcTuh"
-        class="border border-teal-400 px-3 py-1 rounded">View Resume</a>
-      <a href="#experience" class="border border-teal-400 px-6 py-2 rounded">View Experience</a>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-black/95 px-6 pb-6 space-y-4 text-center">
+      <a href="#about" class="block">About</a>
+      <a href="#skills" class="block">Skills</a>
+      <a href="#experience" class="block">Experience</a>
+      <a href="#projects" class="block">Projects</a>
+      <a href="#contact" class="block">Contact</a>
     </div>
-  </div>
-</section>
+  </nav>
 
-<!-- All your sections below remain EXACTLY same (About, Skills, Experience, Projects, Contact, Footer) -->
+  <!-- Hero -->
+  <section class="hero flex items-center justify-center text-center px-6">
+    <div class="bg-black/60 p-8 md:p-12 rounded-xl backdrop-blur reveal max-w-xl">
+      <h1 class="text-3xl md:text-5xl font-extrabold">Mohd Yahiya</h1>
+      <p class="mt-3 text-gray-300">Full Stack Developer</p>
+      <p class="mt-4 italic text-teal-400">"Code. Eat. Repeat."</p>
+      <div class="mt-6 flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="https://drive.google.com/uc?export=download&id=1kUwiCmV5M0UqTaHsqPWexiFym6eZcTuh"
+          class="border border-teal-400 px-3 py-1 rounded">View Resume</a>
+        <a href="#experience" class="border border-teal-400 px-6 py-2 rounded">View Experience</a>
+      </div>
+    </div>
+  </section>
 
-<!-- All your sections below remain EXACTLY same (About, Skills, Experience, Projects, Contact, Footer) -->
+  <!-- All your sections below remain EXACTLY same (About, Skills, Experience, Projects, Contact, Footer) -->
+
+  <!-- All your sections below remain EXACTLY same (About, Skills, Experience, Projects, Contact, Footer) -->
 
   <!-- About -->
   <section id="about" class="py-24 px-6 text-center reveal">
