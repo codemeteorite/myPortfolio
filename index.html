@@ -4,14 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <title>Mohd Yahiya — Software Engineer | Full Stack Developer</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="shortcut icon" href="/favicon.ico">
-<meta name="theme-color" content="#0f766e">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <meta name="theme-color" content="#0f766e">
 
 
   <meta name="description"
@@ -31,13 +31,13 @@
 
 
   <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4BQ4G62W7N"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4BQ4G62W7N');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4BQ4G62W7N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-4BQ4G62W7N');
+  </script>
 
 
 </head>
@@ -168,23 +168,23 @@
     </div>
   </section>
 
- <!-- Stats -->
-<section class="py-24 px-6 text-center reveal bg-gradient-to-b from-black via-slate-950 to-black">
-  <h2 class="text-4xl font-bold mb-10">Live Stats</h2>
+  <!-- Stats -->
+  <section class="py-24 px-6 text-center reveal bg-gradient-to-b from-black via-slate-950 to-black">
+    <h2 class="text-4xl font-bold mb-10">Live Stats</h2>
 
-  <div class="max-w-xl mx-auto glass p-10 rounded-2xl flex flex-col items-center gap-6 shadow-2xl">
+    <div class="max-w-xl mx-auto glass p-10 rounded-2xl flex flex-col items-center gap-6 shadow-2xl">
 
-    <div class="flex items-center gap-3 text-2xl">
-      <span class="text-gray-400">Total Visitors</span>
-      <span id="visitorCount" class="text-teal-400 font-extrabold text-3xl">—</span>
+      <div class="flex items-center gap-3 text-2xl">
+        <span class="text-gray-400">Total Visitors</span>
+        <span id="visitorCount" class="text-teal-400 font-extrabold text-3xl">—</span>
+      </div>
+
+      <p class="text-sm text-gray-500">
+        Real-time count powered by Google Analytics
+      </p>
+
     </div>
-
-    <p class="text-sm text-gray-500">
-      Real-time count powered by Google Analytics
-    </p>
-
-  </div>
-</section>
+  </section>
 
 
   <!-- PROJECTS -->
@@ -308,37 +308,40 @@
 
 
   <script>
-const counterEl = document.getElementById("visitorCount");
+    document.addEventListener("DOMContentLoaded", () => {
+      const counterEl = document.getElementById("visitorCount");
 
-const BASE_OFFSET = 50; // 😈 your secret sauce
+      const BASE_OFFSET = 50;
 
-function animateCount(target) {
-  let current = 0;
-  const duration = 1400;
-  const stepTime = Math.max(Math.floor(duration / target), 18);
+      function animateCount(target) {
+        let current = 0;
+        const duration = 1400;
+        const stepTime = Math.max(Math.floor(duration / target), 18);
 
-  const timer = setInterval(() => {
-    current++;
-    counterEl.textContent = current.toLocaleString();
+        const timer = setInterval(() => {
+          current++;
+          counterEl.textContent = current.toLocaleString();
 
-    if (current >= target) {
-      clearInterval(timer);
-      counterEl.textContent = target.toLocaleString() + "+";
-    }
-  }, stepTime);
-}
+          if (current >= target) {
+            clearInterval(timer);
+            counterEl.textContent = target.toLocaleString() + "+";
+          }
+        }, stepTime);
+      }
 
-fetch("https://visitor-counter-api-s46z.onrender.com/visitors")
-  .then(res => res.json())
-  .then(data => {
-    const realCount = parseInt(data.count) || 0;
-    const displayCount = realCount + BASE_OFFSET;
-    animateCount(displayCount);
-  })
-  .catch(() => {
-    counterEl.textContent = "—";
-  });
-</script>
+      fetch("https://visitor-counter-api-s46z.onrender.com/visitors")
+        .then(res => res.json())
+        .then(data => {
+          const realCount = parseInt(data.count) || 0;
+          const displayCount = realCount + BASE_OFFSET;
+          animateCount(displayCount);
+        })
+        .catch(() => {
+          counterEl.textContent = "—";
+        });
+    });
+  </script>
+
 
 
 </body>
