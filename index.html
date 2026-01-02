@@ -170,7 +170,7 @@
 
  
   <!-- Live Stats -->
-<section class="py-24 px-6 text-center reveal bg-gradient-to-b from-black via-slate-950 to-black">
+<section id="liveStats" class="py-24 px-6 text-center reveal bg-gradient-to-b from-black via-slate-950 to-black">
   <h2 class="text-4xl font-bold mb-10">Live Stats</h2>
 
   <div class="max-w-xl mx-auto glass p-10 rounded-2xl flex flex-col items-center gap-6 shadow-2xl">
@@ -311,29 +311,44 @@
 
 
   <script>
-    console.log("Visitor script loaded");
+const counterEl = document.getElementById("visitorCount");
 
-    document.addEventListener("DOMContentLoaded", () => {
-      console.log("DOM loaded");
+const BASE_OFFSET = 50; // 😈 your secret sauce
 
-      const counterEl = document.getElementById("visitorCount");
-      console.log("Counter element:", counterEl);
+function animateCount(target) {
+  let current = 0;
+  const duration = 1800; // total animation time (ms)
+  const frameRate = 30;
+  const totalFrames = Math.round((duration / 1000) * frameRate);
+  let frame = 0;
 
-      fetch("https://visitor-counter-api-s46z.onrender.com/visitors")
-        .then(res => {
-          console.log("Fetch response:", res);
-          return res.json();
-        })
-        .then(data => {
-          console.log("API data:", data);
-          counterEl.textContent = data.count + "+";
-        })
-        .catch(err => {
-          console.error("Visitor error:", err);
-          counterEl.textContent = "ERR";
-        });
-    });
-  </script>
+  const counter = setInterval(() => {
+    frame++;
+    const progress = frame / totalFrames;
+    const easeOut = 1 - Math.pow(1 - progress, 3); // smooth slow finish
+
+    current = Math.floor(target * easeOut);
+    counterEl.textContent = current.toLocaleString();
+
+    if (frame >= totalFrames) {
+      clearInterval(counter);
+      counterEl.textContent = target.toLocaleString() + "+";
+    }
+  }, 1000 / frameRate);
+}
+
+fetch("https://visitor-counter-api-s46z.onrender.com/visitors")
+  .then(res => res.json())
+  .then(data => {
+    const realCount = parseInt(data.count || 0, 10);
+    const displayCount = realCount + BASE_OFFSET;
+    animateCount(displayCount);
+  })
+  .catch(() => {
+    counterEl.textContent = "—";
+  });
+</script>
+
 
 
 
