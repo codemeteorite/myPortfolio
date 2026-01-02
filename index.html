@@ -176,8 +176,8 @@
   <div class="max-w-xl mx-auto glass p-10 rounded-2xl flex flex-col items-center gap-6 shadow-2xl">
 
     <div class="flex items-center gap-4 text-2xl tracking-wide">
-      <i class="fa-solid fa-eye text-teal-400/80"></i>
       <span class="text-gray-400">Total Visitors</span>
+      <i class="fa-solid fa-eye text-teal-400/80"></i>
       <span id="visitorCount" class="text-teal-400 font-extrabold text-3xl">—</span>
     </div>
 
@@ -313,11 +313,11 @@
   <script>
 const counterEl = document.getElementById("visitorCount");
 
-const BASE_OFFSET = 50; // 😈 your secret sauce
+const BASE_OFFSET = 60;  
 
 function animateCount(target) {
   let current = 0;
-  const duration = 1800; // total animation time (ms)
+  const duration = 4000; // total animation time (ms)
   const frameRate = 30;
   const totalFrames = Math.round((duration / 1000) * frameRate);
   let frame = 0;
