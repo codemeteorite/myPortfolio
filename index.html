@@ -17,7 +17,7 @@
 
   <link rel="manifest" href="/site.webmanifest">
 
-  <meta name="theme-color" content="#0f766e">
+  <meta name="theme-color" content="#0f172a">
 
   <meta name="description"
     content="Mohd Yahiya is a Software Engineer and Full Stack Developer specializing in MERN stack, JavaScript, React, and scalable web applications. View projects and contact details.">
@@ -59,7 +59,7 @@
     body {
       font-family: 'Space Mono', 'Courier New', monospace;
       overflow-x: hidden;
-      background: #000;
+      background: #0a0a0a;
       color: #fff;
     }
 
@@ -85,10 +85,10 @@
 
     nav {
       backdrop-filter: blur(20px);
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(10, 10, 10, 0.9);
       border-bottom: 2px solid;
-      border-image: linear-gradient(90deg, #8b5cf6, #ec4899, #8b5cf6) 1;
-      box-shadow: 0 4px 30px rgba(139, 92, 246, 0.3);
+      border-image: linear-gradient(90deg, #1e40af, #06b6d4, #1e40af) 1;
+      box-shadow: 0 4px 30px rgba(30, 64, 175, 0.3);
     }
 
     nav a {
@@ -107,7 +107,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: linear-gradient(90deg, #8b5cf6, #ec4899);
+      background: linear-gradient(90deg, #1e40af, #06b6d4);
       transition: width 0.3s ease;
     }
 
@@ -116,18 +116,18 @@
     }
 
     nav a:hover {
-      color: #a78bfa;
-      text-shadow: 0 0 10px rgba(167, 139, 250, 0.8);
+      color: #60a5fa;
+      text-shadow: 0 0 10px rgba(96, 165, 250, 0.8);
     }
 
     .glass {
-      background: linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 27, 75, 0.5) 100%);
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.8) 0%, rgba(30, 41, 59, 0.6) 100%);
       backdrop-filter: blur(30px);
-      border: 2px solid rgba(139, 92, 246, 0.4);
+      border: 2px solid rgba(30, 64, 175, 0.3);
       border-radius: 1.5rem;
-      box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2), 
-                  0 0 80px rgba(236, 72, 153, 0.15),
-                  inset 0 0 60px rgba(139, 92, 246, 0.05);
+      box-shadow: 0 8px 32px rgba(30, 64, 175, 0.2), 
+                  0 0 80px rgba(6, 182, 212, 0.15),
+                  inset 0 0 60px rgba(30, 64, 175, 0.05);
       position: relative;
       overflow: hidden;
     }
@@ -139,7 +139,7 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: linear-gradient(45deg, transparent, rgba(139, 92, 246, 0.1), transparent);
+      background: linear-gradient(45deg, transparent, rgba(30, 64, 175, 0.1), transparent);
       transform: rotate(45deg);
       animation: shimmer 3s infinite;
     }
@@ -175,7 +175,7 @@
     #loader {
       position: fixed;
       inset: 0;
-      background: linear-gradient(135deg, #000000 0%, #1a0a2e 50%, #000000 100%);
+      background: linear-gradient(135deg, #000000 0%, #0f172a 50%, #000000 100%);
       z-index: 9999;
       display: flex;
       align-items: center;
@@ -185,11 +185,11 @@
     @keyframes pulse {
       0%, 100% { 
         opacity: 1; 
-        text-shadow: 0 0 30px rgba(139, 92, 246, 1), 0 0 60px rgba(236, 72, 153, 0.5);
+        text-shadow: 0 0 30px rgba(30, 64, 175, 1), 0 0 60px rgba(6, 182, 212, 0.5);
       }
       50% { 
         opacity: 0.7; 
-        text-shadow: 0 0 50px rgba(236, 72, 153, 1), 0 0 80px rgba(139, 92, 246, 0.5);
+        text-shadow: 0 0 50px rgba(6, 182, 212, 1), 0 0 80px rgba(30, 64, 175, 0.5);
       }
     }
 
@@ -204,11 +204,11 @@
 
     .project-card:hover {
       transform: translateY(-12px) rotateX(3deg) scale(1.02);
-      box-shadow: 0 30px 80px rgba(139, 92, 246, 0.4);
+      box-shadow: 0 30px 80px rgba(30, 64, 175, 0.4);
     }
 
     .glow-text {
-      text-shadow: 0 0 30px rgba(139, 92, 246, 0.7), 0 0 60px rgba(236, 72, 153, 0.3);
+      text-shadow: 0 0 30px rgba(30, 64, 175, 0.7), 0 0 60px rgba(6, 182, 212, 0.3);
     }
 
     a {
@@ -291,17 +291,17 @@
 
     .neon-border {
       border: 2px solid;
-      border-image: linear-gradient(45deg, #8b5cf6, #ec4899, #f59e0b, #8b5cf6) 1;
+      border-image: linear-gradient(45deg, #1e40af, #06b6d4, #3b82f6, #1e40af) 1;
       animation: border-flow 3s linear infinite;
-      box-shadow: 0 0 20px rgba(139, 92, 246, 0.5), inset 0 0 20px rgba(236, 72, 153, 0.2);
+      box-shadow: 0 0 20px rgba(30, 64, 175, 0.5), inset 0 0 20px rgba(6, 182, 212, 0.2);
     }
 
     @keyframes border-flow {
-      0% { border-image-source: linear-gradient(0deg, #8b5cf6, #ec4899, #f59e0b, #8b5cf6); }
-      25% { border-image-source: linear-gradient(90deg, #8b5cf6, #ec4899, #f59e0b, #8b5cf6); }
-      50% { border-image-source: linear-gradient(180deg, #8b5cf6, #ec4899, #f59e0b, #8b5cf6); }
-      75% { border-image-source: linear-gradient(270deg, #8b5cf6, #ec4899, #f59e0b, #8b5cf6); }
-      100% { border-image-source: linear-gradient(360deg, #8b5cf6, #ec4899, #f59e0b, #8b5cf6); }
+      0% { border-image-source: linear-gradient(0deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
+      25% { border-image-source: linear-gradient(90deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
+      50% { border-image-source: linear-gradient(180deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
+      75% { border-image-source: linear-gradient(270deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
+      100% { border-image-source: linear-gradient(360deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
     }
 
     @keyframes glow-pulse {
@@ -342,7 +342,7 @@
       top: 0;
       width: 3px;
       height: 100%;
-      background: linear-gradient(180deg, #8b5cf6, #ec4899);
+      background: linear-gradient(180deg, #1e40af, #06b6d4);
       border-radius: 3px;
     }
 
@@ -353,20 +353,20 @@
       top: 1.5rem;
       width: 15px;
       height: 15px;
-      background: #ec4899;
-      border: 3px solid #8b5cf6;
+      background: #06b6d4;
+      border: 3px solid #1e40af;
       border-radius: 50%;
-      box-shadow: 0 0 20px rgba(236, 72, 153, 0.8);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.8);
       animation: pulse-dot 2s ease-in-out infinite;
     }
 
     @keyframes pulse-dot {
       0%, 100% {
-        box-shadow: 0 0 20px rgba(236, 72, 153, 0.8);
+        box-shadow: 0 0 20px rgba(6, 182, 212, 0.8);
         transform: scale(1);
       }
       50% {
-        box-shadow: 0 0 30px rgba(236, 72, 153, 1);
+        box-shadow: 0 0 30px rgba(6, 182, 212, 1);
         transform: scale(1.2);
       }
     }
@@ -380,14 +380,14 @@
 
     .btn-3d:hover {
       transform: translateY(-5px);
-      box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+      box-shadow: 0 10px 30px rgba(30, 64, 175, 0.5);
     }
 
     .btn-3d::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+      background: linear-gradient(135deg, rgba(30, 64, 175, 0.2), rgba(6, 182, 212, 0.2));
       border-radius: inherit;
       transform: translateZ(-10px);
       transition: all 0.3s ease;
@@ -402,10 +402,79 @@
       position: fixed;
       pointer-events: none;
       border-radius: 50%;
-      background: rgba(139, 92, 246, 0.5);
+      background: rgba(30, 64, 175, 0.5);
       transform: translate(-50%, -50%);
       z-index: 9999;
       mix-blend-mode: difference;
+    }
+
+    /* Project buttons */
+    .project-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .project-btn {
+      flex: 1;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      text-align: center;
+      border: 2px solid;
+    }
+
+    .project-btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-repo {
+      background: rgba(30, 64, 175, 0.2);
+      border-color: #1e40af;
+      color: #60a5fa;
+    }
+
+    .btn-repo:hover {
+      background: rgba(30, 64, 175, 0.4);
+      box-shadow: 0 5px 20px rgba(30, 64, 175, 0.4);
+    }
+
+    .btn-live {
+      background: rgba(6, 182, 212, 0.2);
+      border-color: #06b6d4;
+      color: #67e8f9;
+    }
+
+    .btn-live:hover {
+      background: rgba(6, 182, 212, 0.4);
+      box-shadow: 0 5px 20px rgba(6, 182, 212, 0.4);
+    }
+
+    /* Hidden projects */
+    .hidden-projects {
+      display: none;
+    }
+
+    .hidden-projects.active {
+      display: grid;
+      animation: fadeIn 0.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Tech stack icons */
+    .tech-icon {
+      font-size: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   </style>
 </head>
@@ -416,7 +485,7 @@
 
   <!-- Loader -->
   <div id="loader">
-    <p class="text-xl md:text-3xl font-bold animate-pulse" style="background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Loading Portfolio</p>
+    <p class="text-xl md:text-3xl font-bold animate-pulse" style="background: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Loading Portfolio</p>
   </div>
 
   <div class="content-layer">
@@ -433,7 +502,7 @@
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
           <a href="https://drive.google.com/uc?export=download&id=1eJaIRs28Yrpljcy5b0asAVJ0_ND14r5e"
-            class="border border-purple-400 px-3 py-1 rounded hover:bg-purple-400/20">
+            class="border border-blue-400 px-3 py-1 rounded hover:bg-blue-400/20">
             View Resume
           </a>
         </div>
@@ -457,15 +526,15 @@
     <!-- Hero -->
     <section class="hero px-6">
       <div class="glass p-10 md:p-16 rounded-3xl max-w-3xl reveal neon-border">
-        <h1 class="text-4xl md:text-7xl font-extrabold glow-text mb-4" style="background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        <h1 class="text-4xl md:text-7xl font-extrabold glow-text mb-4" style="background: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
           MOHD YAHIYA
         </h1>
         <p class="mt-6 text-xl md:text-2xl text-gray-300 uppercase tracking-wider font-bold">Full Stack Developer</p>
-        <p class="mt-6 italic text-purple-400 text-lg md:text-xl font-mono">&lt; Code. Eat. Repeat. /&gt;</p>
+        <p class="mt-6 italic text-blue-400 text-lg md:text-xl font-mono">&lt; Code. Eat. Repeat. /&gt;</p>
         <div class="mt-10 flex flex-col sm:flex-row gap-6 justify-center">
           <a href="https://drive.google.com/uc?export=download&id=1eJaIRs28Yrpljcy5b0asAVJ0_ND14r5e"
-            class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-purple-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group relative">
-            <span class="group-hover:text-purple-300 flex items-center justify-center gap-3">
+            class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-blue-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group relative">
+            <span class="group-hover:text-blue-300 flex items-center justify-center gap-3">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"/>
                 <path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
@@ -473,8 +542,8 @@
               View Resume
             </span>
           </a>
-          <a href="#experience" class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-pink-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group">
-            <span class="group-hover:text-pink-300 flex items-center justify-center gap-3">
+          <a href="#experience" class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-cyan-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group">
+            <span class="group-hover:text-cyan-300 flex items-center justify-center gap-3">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
                 <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
@@ -491,8 +560,8 @@
       <h2 class="text-4xl md:text-5xl font-bold mb-10 glow-text">ABOUT ME</h2>
       <div class="max-w-4xl mx-auto glass p-10 md:p-12 rounded-3xl">
         <p class="text-gray-300 leading-relaxed text-base md:text-lg">
-          Passionate full-stack developer with <span class="text-purple-400 font-bold">500+ hours</span> of coding and a <span class="text-pink-400 font-bold">500+ day</span> coding streak.
-          Obsessed with building <span class="text-cyan-400 font-bold">clean systems</span> and <span class="text-purple-400 font-bold">beautiful interfaces</span>.
+          Passionate full-stack developer with <span class="text-blue-400 font-bold">500+ hours</span> of coding and a <span class="text-cyan-400 font-bold">500+ day</span> coding streak.
+          Obsessed with building <span class="text-cyan-400 font-bold">clean systems</span> and <span class="text-blue-400 font-bold">beautiful interfaces</span>.
         </p>
       </div>
     </section>
@@ -548,19 +617,19 @@
 
           <!-- Claude AI -->
           <div class="skill-icon flex flex-col items-center gap-3">
-            <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 24 24" fill="none" style="filter: drop-shadow(0 0 10px #d97706);">
-              <circle cx="12" cy="12" r="10" fill="#d97706"/>
+            <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 24 24" fill="none" style="filter: drop-shadow(0 0 10px #0ea5e9);">
+              <circle cx="12" cy="12" r="10" fill="#0ea5e9"/>
               <path d="M8 10h8M8 14h8" stroke="white" stroke-width="2" stroke-linecap="round"/>
               <circle cx="10" cy="10" r="1" fill="white"/>
               <circle cx="14" cy="10" r="1" fill="white"/>
             </svg>
-            <span class="text-xs md:text-sm font-bold text-amber-500 uppercase tracking-wider">Claude AI</span>
+            <span class="text-xs md:text-sm font-bold text-cyan-500 uppercase tracking-wider">Claude AI</span>
           </div>
 
           <!-- Bootstrap -->
           <div class="skill-icon flex flex-col items-center gap-3">
             <i class="devicon-bootstrap-plain text-6xl md:text-8xl" style="color: #7952b3;"></i>
-            <span class="text-xs md:text-sm font-bold text-purple-400 uppercase tracking-wider">Bootstrap</span>
+            <span class="text-xs md:text-sm font-bold text-blue-400 uppercase tracking-wider">Bootstrap</span>
           </div>
 
           <!-- HTML5 -->
@@ -589,12 +658,12 @@
         <div class="timeline-item glass p-8 md:p-10 neon-border rounded-2xl">
           <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
             <div>
-              <h3 class="text-xl md:text-2xl font-bold text-purple-300 mb-2">Project Team Lead</h3>
-              <p class="text-pink-400 font-bold text-sm md:text-base uppercase tracking-wider">Internship</p>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-300 mb-2">Project Team Lead</h3>
+              <p class="text-cyan-400 font-bold text-sm md:text-base uppercase tracking-wider">Internship</p>
             </div>
             <div class="flex items-center gap-3">
-              <div class="hidden md:block w-3 h-3 rounded-full bg-purple-400" style="box-shadow: 0 0 10px #a78bfa;"></div>
-              <span class="text-purple-400 text-sm md:text-base font-bold uppercase tracking-wider">Apr 2025 – Oct 2025</span>
+              <div class="hidden md:block w-3 h-3 rounded-full bg-blue-400" style="box-shadow: 0 0 10px #60a5fa;"></div>
+              <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-wider">Apr 2025 – Oct 2025</span>
             </div>
           </div>
           
@@ -614,12 +683,12 @@
         <div class="timeline-item glass p-8 md:p-10 neon-border rounded-2xl">
           <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
             <div>
-              <h3 class="text-xl md:text-2xl font-bold text-purple-300 mb-2">ReactJS Development</h3>
-              <p class="text-pink-400 font-bold text-sm md:text-base uppercase tracking-wider">Internship</p>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-300 mb-2">ReactJS Development</h3>
+              <p class="text-cyan-400 font-bold text-sm md:text-base uppercase tracking-wider">Internship</p>
             </div>
             <div class="flex items-center gap-3">
-              <div class="hidden md:block w-3 h-3 rounded-full bg-purple-400" style="box-shadow: 0 0 10px #a78bfa;"></div>
-              <span class="text-purple-400 text-sm md:text-base font-bold uppercase tracking-wider">Sep 2024 – Feb 2025</span>
+              <div class="hidden md:block w-3 h-3 rounded-full bg-blue-400" style="box-shadow: 0 0 10px #60a5fa;"></div>
+              <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-wider">Sep 2024 – Feb 2025</span>
             </div>
           </div>
           
@@ -639,12 +708,12 @@
         <div class="timeline-item glass p-8 md:p-10 neon-border rounded-2xl">
           <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
             <div>
-              <h3 class="text-xl md:text-2xl font-bold text-purple-300 mb-2">Teaching Assistant</h3>
-              <p class="text-pink-400 font-bold text-sm md:text-base uppercase tracking-wider">Internship</p>
+              <h3 class="text-xl md:text-2xl font-bold text-blue-300 mb-2">Teaching Assistant</h3>
+              <p class="text-cyan-400 font-bold text-sm md:text-base uppercase tracking-wider">Internship</p>
             </div>
             <div class="flex items-center gap-3">
-              <div class="hidden md:block w-3 h-3 rounded-full bg-purple-400" style="box-shadow: 0 0 10px #a78bfa;"></div>
-              <span class="text-purple-400 text-sm md:text-base font-bold uppercase tracking-wider">Jul 2024 – Sep 2024</span>
+              <div class="hidden md:block w-3 h-3 rounded-full bg-blue-400" style="box-shadow: 0 0 10px #60a5fa;"></div>
+              <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-wider">Jul 2024 – Sep 2024</span>
             </div>
           </div>
           
@@ -669,11 +738,11 @@
 
       <div class="max-w-2xl mx-auto glass p-12 md:p-16 rounded-3xl neon-border">
         <div class="flex flex-col items-center gap-6">
-          <i class="fa-solid fa-eye text-5xl md:text-6xl" style="color: #a78bfa; filter: drop-shadow(0 0 20px #a78bfa);"></i>
+          <i class="fa-solid fa-eye text-5xl md:text-6xl" style="color: #60a5fa; filter: drop-shadow(0 0 20px #60a5fa);"></i>
           
           <div>
             <p class="text-gray-400 text-sm md:text-base uppercase tracking-widest mb-4 font-bold">Total Visitors</p>
-            <p id="visitorCount" class="stat-number text-5xl md:text-7xl font-black glow-text" style="color: #ec4899;">—</p>
+            <p id="visitorCount" class="stat-number text-5xl md:text-7xl font-black glow-text" style="color: #06b6d4;">—</p>
           </div>
 
           <div class="mt-4 flex items-center gap-3">
@@ -690,72 +759,183 @@
     <section id="projects" class="py-32 px-6 reveal">
       <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 glow-text">FEATURED PROJECTS</h2>
 
-      <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-10">
-        <!-- Card 1 -->
-        <div class="project-card rounded-3xl neon-border">
-          <div class="rounded-3xl glass p-8 h-full flex flex-col justify-between">
-            <div>
-              <h3 class="text-2xl md:text-3xl font-bold mb-3 text-purple-300">Digital Footprints</h3>
-              <p class="text-gray-400 mb-8 leading-relaxed">Full-stack blogging platform with real-time features</p>
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-10 mb-16">
+          <!-- Homify Card -->
+          <div class="project-card rounded-3xl neon-border">
+            <div class="rounded-3xl glass p-8 h-full flex flex-col justify-between">
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 text-blue-300">Homify</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">Full-stack property rental platform with booking, reviews, and payment integration</p>
 
-              <div class="flex gap-4 text-4xl md:text-5xl mb-8">
-                <i class="devicon-react-original" style="color: #61dafb;"></i>
-                <i class="devicon-nodejs-plain" style="color: #68a063;"></i>
-                <i class="devicon-mongodb-plain" style="color: #4db33d;"></i>
-                <i class="devicon-tailwindcss-plain" style="color: #06b6d4;"></i>
+                <div class="flex gap-4 text-4xl md:text-5xl mb-8">
+                  <i class="devicon-react-original" style="color: #61dafb;"></i>
+                  <i class="devicon-nodejs-plain" style="color: #68a063;"></i>
+                  <i class="devicon-mongodb-plain" style="color: #4db33d;"></i>
+                  <i class="devicon-tailwindcss-plain" style="color: #06b6d4;"></i>
+                  <!-- Express -->
+                  <div class="tech-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #ffffff;">
+                      <path d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/>
+                    </svg>
+                  </div>
+                  <!-- bcrypt -->
+                  <div class="tech-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #00a8ff;">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                    </svg>
+                  </div>
+                  <!-- MongoDB Compass -->
+                  <div class="tech-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #4db33d;">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                  </div>
+                  <!-- ImageKit -->
+                  <div class="tech-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #f15a24;">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="project-buttons">
+                  <a href="https://github.com/codemeteorite/Homify/" target="_blank"
+                    class="project-btn btn-repo">
+                    View Repo
+                  </a>
+                  <a href="https://homify-7mw5.onrender.com/" target="_blank"
+                    class="project-btn btn-live">
+                    Peek Live
+                  </a>
+                </div>
               </div>
             </div>
+          </div>
 
-            <a href="https://github.com/codemeteorite/DigitalFootprints" target="_blank"
-              class="inline-flex items-center gap-3 text-purple-400 font-bold uppercase tracking-wider text-sm hover:text-pink-400 transition group">
-              <span>View on GitHub</span>
-              <span class="transition-transform group-hover:translate-x-2">→</span>
-            </a>
+          <!-- Digital Footprints -->
+          <div class="project-card rounded-3xl neon-border">
+            <div class="rounded-3xl glass p-8 h-full flex flex-col justify-between">
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 text-blue-300">Digital Footprints</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">Full-stack blogging platform with real-time features</p>
+
+                <div class="flex gap-4 text-4xl md:text-5xl mb-8">
+                  <i class="devicon-react-original" style="color: #61dafb;"></i>
+                  <i class="devicon-nodejs-plain" style="color: #68a063;"></i>
+                  <i class="devicon-mongodb-plain" style="color: #4db33d;"></i>
+                  <i class="devicon-tailwindcss-plain" style="color: #06b6d4;"></i>
+                  <!-- Express -->
+                  <div class="tech-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #ffffff;">
+                      <path d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 a6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/>
+                    </svg>
+                  </div>
+                  <!-- bcrypt -->
+                  <div class="tech-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #00a8ff;">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                    </svg>
+                  </div>
+                  <!-- MongoDB Compass -->
+                  <div class="tech-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #4db33d;">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                  </div>
+                  <!-- ImageKit -->
+                  <div class="tech-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #f15a24;">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z"/>
+                    </svg>
+                  </div>
+                </div>
+
+                <div class="project-buttons">
+                  <a href="https://github.com/codemeteorite/DigitalFootprints" target="_blank"
+                    class="project-btn btn-repo">
+                    View Repo
+                  </a>
+                  <a href="#" target="_blank"
+                    class="project-btn btn-live">
+                    Peek Live
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simon Says Game -->
+          <div class="project-card rounded-3xl neon-border">
+            <div class="rounded-3xl glass p-8 h-full flex flex-col justify-between">
+              <div>
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 text-blue-300">Simon Says Game</h3>
+                <p class="text-gray-400 mb-8 leading-relaxed">Classic memory challenge with smooth UI</p>
+
+                <div class="flex gap-4 text-4xl md:text-5xl mb-8">
+                  <i class="devicon-javascript-plain" style="color: #f7df1e;"></i>
+                  <i class="devicon-html5-plain" style="color: #e34c26;"></i>
+                  <i class="devicon-css3-plain" style="color: #264de4;"></i>
+                </div>
+
+                <div class="project-buttons">
+                  <a href="https://github.com/codemeteorite/simon-says-game" target="_blank"
+                    class="project-btn btn-repo">
+                    View Repo
+                  </a>
+                  <a href="https://simonsaysdev.netlify.app/" target="_blank"
+                    class="project-btn btn-live">
+                    Peek Live
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="project-card rounded-3xl neon-border">
-          <div class="rounded-3xl glass p-8 h-full flex flex-col justify-between">
-            <div>
-              <h3 class="text-2xl md:text-3xl font-bold mb-3 text-purple-300">Simon Says Game</h3>
-              <p class="text-gray-400 mb-8 leading-relaxed">Classic memory challenge with smooth UI</p>
+        <!-- Hidden Projects - Only Typing Speed Detector remains -->
+        <div id="hiddenProjects" class="hidden-projects">
+          <div class="grid md:grid-cols-3 gap-10">
+            <!-- Typing Speed Detector -->
+            <div class="project-card rounded-3xl neon-border">
+              <div class="rounded-3xl glass p-8 h-full flex flex-col justify-between">
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-bold mb-3 text-blue-300">Typing Speed Detector</h3>
+                  <p class="text-gray-400 mb-8 leading-relaxed">Train speed & accuracy with interactive UI</p>
 
-              <div class="flex gap-4 text-4xl md:text-5xl mb-8">
-                <i class="devicon-javascript-plain" style="color: #f7df1e;"></i>
-                <i class="devicon-html5-plain" style="color: #e34c26;"></i>
-                <i class="devicon-css3-plain" style="color: #264de4;"></i>
+                  <div class="flex gap-4 text-4xl md:text-5xl mb-8">
+                    <i class="devicon-javascript-plain" style="color: #f7df1e;"></i>
+                    <i class="devicon-html5-plain" style="color: #e34c26;"></i>
+                    <i class="devicon-css3-plain" style="color: #264de4;"></i>
+                  </div>
+
+                  <div class="project-buttons">
+                    <a href="https://github.com/codemeteorite/Typing-Speed-Detector" target="_blank"
+                      class="project-btn btn-repo">
+                      View Repo
+                    </a>
+                    <a href="https://typemasters.ccbp.tech/" target="_blank"
+                      class="project-btn btn-live">
+                      Peek Live
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <a href="https://simonsaysdev.netlify.app/" target="_blank"
-              class="inline-flex items-center gap-3 text-purple-400 font-bold uppercase tracking-wider text-sm hover:text-pink-400 transition group">
-              <span>Live Demo</span>
-              <span class="transition-transform group-hover:translate-x-2">→</span>
-            </a>
           </div>
         </div>
 
-        <!-- Card 3 -->
-        <div class="project-card rounded-3xl neon-border">
-          <div class="rounded-3xl glass p-8 h-full flex flex-col justify-between">
-            <div>
-              <h3 class="text-2xl md:text-3xl font-bold mb-3 text-purple-300">Typing Speed Detector</h3>
-              <p class="text-gray-400 mb-8 leading-relaxed">Train speed & accuracy with interactive UI</p>
-
-              <div class="flex gap-4 text-4xl md:text-5xl mb-8">
-                <i class="devicon-javascript-plain" style="color: #f7df1e;"></i>
-                <i class="devicon-html5-plain" style="color: #e34c26;"></i>
-                <i class="devicon-css3-plain" style="color: #264de4;"></i>
-              </div>
-            </div>
-
-            <a href="https://typemasters.ccbp.tech/" target="_blank"
-              class="inline-flex items-center gap-3 text-purple-400 font-bold uppercase tracking-wider text-sm hover:text-pink-400 transition group">
-              <span>Live Demo</span>
-              <span class="transition-transform group-hover:translate-x-2">→</span>
-            </a>
-          </div>
+        <!-- See More Button -->
+        <div class="text-center mt-16">
+          <button id="seeMoreBtn" 
+            class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-blue-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group">
+            <span class="group-hover:text-blue-300 flex items-center justify-center gap-3">
+              <svg class="w-5 h-5 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              </svg>
+              See More Projects
+            </span>
+          </button>
         </div>
       </div>
     </section>
@@ -765,48 +945,22 @@
       <h2 class="text-4xl md:text-5xl font-bold mb-6 glow-text">GET IN TOUCH</h2>
 
       <p class="text-gray-300 mb-16 text-lg md:text-xl select-all">
-        <a href="mailto:yahiya3059@gmail.com" class="hover:text-purple-400 transition glow-text">
+        <a href="mailto:yahiya3059@gmail.com" class="hover:text-blue-400 transition glow-text">
           yahiya3059@gmail.com
         </a>
       </p>
 
       <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         
-        <!-- Instagram Card -->
-        <a href="https://www.instagram.com/mohdyahiya_/" target="_blank"
-          class="social-card glass p-10 rounded-3xl block neon-border group"
-          style="color: #ec4899;">
-          <div class="flex flex-col items-center gap-6">
-            <!-- 3D Animated Icon -->
-            <div class="icon-3d relative">
-              <div class="absolute inset-0 bg-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
-              <div class="relative bg-gradient-to-br from-pink-500 to-purple-600 p-6 rounded-2xl">
-                <i class="fa-brands fa-instagram text-6xl md:text-7xl text-white"></i>
-              </div>
-            </div>
-            
-            <div class="text-center">
-              <h3 class="font-black text-2xl md:text-3xl mb-3 uppercase tracking-wide">Instagram</h3>
-              <p class="text-sm md:text-base text-gray-400 font-mono">@mohdyahiya_</p>
-            </div>
-          </div>
-          <div class="mt-6 text-sm md:text-base font-bold uppercase tracking-wider opacity-75 group-hover:opacity-100 transition flex items-center justify-center gap-2">
-            <span>Follow</span>
-            <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
-            </svg>
-          </div>
-        </a>
-
         <!-- LinkedIn Card -->
         <a href="https://www.linkedin.com/in/yahiyamohd/" target="_blank"
           class="social-card glass p-10 rounded-3xl block neon-border group"
-          style="color: #3b82f6;">
+          style="color: #0077B5;">
           <div class="flex flex-col items-center gap-6">
             <!-- 3D Animated Icon -->
             <div class="icon-3d relative">
-              <div class="absolute inset-0 bg-blue-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
-              <div class="relative bg-gradient-to-br from-blue-500 to-blue-700 p-6 rounded-2xl">
+              <div class="absolute inset-0 bg-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
+              <div class="relative bg-gradient-to-br from-blue-600 to-blue-800 p-6 rounded-2xl">
                 <i class="fa-brands fa-linkedin text-6xl md:text-7xl text-white"></i>
               </div>
             </div>
@@ -827,12 +981,12 @@
         <!-- GitHub Card -->
         <a href="https://github.com/codemeteorite" target="_blank" 
           class="social-card glass p-10 rounded-3xl block neon-border group"
-          style="color: #a78bfa;">
+          style="color: #8A2BE2;">
           <div class="flex flex-col items-center gap-6">
             <!-- 3D Animated Icon -->
             <div class="icon-3d relative">
-              <div class="absolute inset-0 bg-purple-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
-              <div class="relative bg-gradient-to-br from-purple-500 to-purple-700 p-6 rounded-2xl">
+              <div class="absolute inset-0 bg-purple-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
+              <div class="relative bg-gradient-to-br from-purple-600 to-purple-800 p-6 rounded-2xl">
                 <i class="fa-brands fa-github text-6xl md:text-7xl text-white"></i>
               </div>
             </div>
@@ -850,10 +1004,36 @@
           </div>
         </a>
 
+        <!-- Instagram Card -->
+        <a href="https://www.instagram.com/mohdyahiya_/" target="_blank"
+          class="social-card glass p-10 rounded-3xl block neon-border group"
+          style="color: #E4405F;">
+          <div class="flex flex-col items-center gap-6">
+            <!-- 3D Animated Icon -->
+            <div class="icon-3d relative">
+              <div class="absolute inset-0 bg-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
+              <div class="relative bg-gradient-to-br from-pink-500 to-pink-700 p-6 rounded-2xl">
+                <i class="fa-brands fa-instagram text-6xl md:text-7xl text-white"></i>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <h3 class="font-black text-2xl md:text-3xl mb-3 uppercase tracking-wide">Instagram</h3>
+              <p class="text-sm md:text-base text-gray-400 font-mono">@mohdyahiya_</p>
+            </div>
+          </div>
+          <div class="mt-6 text-sm md:text-base font-bold uppercase tracking-wider opacity-75 group-hover:opacity-100 transition flex items-center justify-center gap-2">
+            <span>Follow</span>
+            <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+          </div>
+        </a>
+
       </div>
 
       <p class="mt-16 text-base md:text-lg text-gray-400 font-bold uppercase tracking-wider">
-        Let's build something <span class="text-purple-400 glow-text">IMPACTFUL</span>
+        Let's build something <span class="text-blue-400 glow-text">IMPACTFUL</span>
       </p>
     </section>
 
@@ -914,20 +1094,20 @@
         positions[i3 + 1] = (Math.random() - 0.5) * 300;
         positions[i3 + 2] = (Math.random() - 0.5) * 300;
 
-        // Colors - Purple to Pink gradient
+        // Colors - Dark Blue to Cyan gradient
         const colorChoice = Math.random();
         if (colorChoice < 0.33) {
-          colors[i3] = 0.545;     // Purple
-          colors[i3 + 1] = 0.361;
-          colors[i3 + 2] = 0.961;
+          colors[i3] = 0.118;     // Deep Blue
+          colors[i3 + 1] = 0.251;
+          colors[i3 + 2] = 0.686;
         } else if (colorChoice < 0.66) {
-          colors[i3] = 0.925;     // Pink
-          colors[i3 + 1] = 0.282;
-          colors[i3 + 2] = 0.6;
+          colors[i3] = 0.031;     // Cyan
+          colors[i3 + 1] = 0.569;
+          colors[i3 + 2] = 0.698;
         } else {
-          colors[i3] = 0.658;     // Violet
-          colors[i3 + 1] = 0.545;
-          colors[i3 + 2] = 0.961;
+          colors[i3] = 0.231;     // Sky Blue
+          colors[i3 + 1] = 0.647;
+          colors[i3 + 2] = 0.980;
         }
       }
 
@@ -951,7 +1131,7 @@
       // Torus Knot - Ancient Celtic knot
       const torusGeometry = new THREE.TorusKnotGeometry(10, 3, 128, 16, 2, 3);
       const torusMaterial = new THREE.MeshBasicMaterial({
-        color: 0x8b5cf6,
+        color: 0x1e40af,
         wireframe: true,
         transparent: true,
         opacity: 0.2
@@ -964,7 +1144,7 @@
       // Octahedron - Platonic solid
       const octaGeometry = new THREE.OctahedronGeometry(8, 0);
       const octaMaterial = new THREE.MeshBasicMaterial({
-        color: 0xec4899,
+        color: 0x06b6d4,
         wireframe: true,
         transparent: true,
         opacity: 0.25
@@ -977,7 +1157,7 @@
       // Icosahedron - Sacred geometry
       const icoGeometry = new THREE.IcosahedronGeometry(12, 1);
       const icoMaterial = new THREE.MeshBasicMaterial({
-        color: 0xa78bfa,
+        color: 0x60a5fa,
         wireframe: true,
         transparent: true,
         opacity: 0.18
@@ -990,7 +1170,7 @@
       // Dodecahedron - Universe structure
       const dodecaGeometry = new THREE.DodecahedronGeometry(7, 0);
       const dodecaMaterial = new THREE.MeshBasicMaterial({
-        color: 0xf472b6,
+        color: 0x3b82f6,
         wireframe: true,
         transparent: true,
         opacity: 0.22
@@ -1003,7 +1183,7 @@
       // Sphere - Fibonacci pattern
       const sphereGeometry = new THREE.SphereGeometry(6, 32, 32);
       const sphereMaterial = new THREE.MeshBasicMaterial({
-        color: 0xc084fc,
+        color: 0x1e40af,
         wireframe: true,
         transparent: true,
         opacity: 0.15
@@ -1161,6 +1341,34 @@
       });
     });
 
+    // ===== SEE MORE PROJECTS =====
+    const seeMoreBtn = document.getElementById('seeMoreBtn');
+    const hiddenProjects = document.getElementById('hiddenProjects');
+
+    seeMoreBtn.addEventListener('click', () => {
+      hiddenProjects.classList.toggle('active');
+      
+      if (hiddenProjects.classList.contains('active')) {
+        seeMoreBtn.innerHTML = `
+          <span class="group-hover:text-blue-300 flex items-center justify-center gap-3">
+            <svg class="w-5 h-5 transition-transform rotate-180" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            Show Less
+          </span>
+        `;
+      } else {
+        seeMoreBtn.innerHTML = `
+          <span class="group-hover:text-blue-300 flex items-center justify-center gap-3">
+            <svg class="w-5 h-5 transition-transform" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+            </svg>
+            See More Projects
+          </span>
+        `;
+      }
+    });
+
     // ===== SKILL ICONS INTERACTION =====
     document.querySelectorAll('.skill-icon').forEach(icon => {
       icon.addEventListener('mouseenter', () => {
@@ -1176,7 +1384,7 @@
         ripple.style.width = '0px';
         ripple.style.height = '0px';
         ripple.style.borderRadius = '50%';
-        ripple.style.backgroundColor = 'rgba(139, 92, 246, 0.3)';
+        ripple.style.backgroundColor = 'rgba(30, 64, 175, 0.3)';
         ripple.style.transform = 'translate(-50%, -50%)';
         ripple.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         ripple.style.zIndex = '1';
@@ -1243,13 +1451,13 @@
       element.addEventListener('mouseenter', () => {
         cursor.style.width = '40px';
         cursor.style.height = '40px';
-        cursor.style.backgroundColor = 'rgba(236, 72, 153, 0.7)';
+        cursor.style.backgroundColor = 'rgba(6, 182, 212, 0.7)';
       });
       
       element.addEventListener('mouseleave', () => {
         cursor.style.width = '20px';
         cursor.style.height = '20px';
-        cursor.style.backgroundColor = 'rgba(139, 92, 246, 0.5)';
+        cursor.style.backgroundColor = 'rgba(30, 64, 175, 0.5)';
       });
     });
 
@@ -1391,9 +1599,9 @@
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = scrollY / docHeight;
       
-      // Create color based on scroll position
-      const hue = 270 + scrollPercent * 90; // Purple to Pink
-      const bgColor = `hsl(${hue}, 70%, 5%)`;
+      // Create color based on scroll position (Dark Blue to Darker Blue)
+      const hue = 220 + scrollPercent * 40;
+      const bgColor = `hsl(${hue}, 80%, 3%)`;
       document.body.style.background = bgColor;
     }
 
@@ -1427,7 +1635,7 @@
           notification.style.position = 'fixed';
           notification.style.bottom = '20px';
           notification.style.right = '20px';
-          notification.style.background = 'linear-gradient(135deg, #8b5cf6, #ec4899)';
+          notification.style.background = 'linear-gradient(135deg, #1e40af, #06b6d4)';
           notification.style.color = 'white';
           notification.style.padding = '15px 25px';
           notification.style.borderRadius = '10px';
@@ -1456,6 +1664,12 @@
           mobileMenu.classList.add('hidden');
         }
       }
+      
+      // Space to toggle projects
+      if (e.key === ' ' && e.target === document.body) {
+        e.preventDefault();
+        seeMoreBtn.click();
+      }
     });
 
     // ===== PERFORMANCE OPTIMIZATION =====
@@ -1471,17 +1685,16 @@
     // ===== CONSOLE GREETING =====
     console.log(
       '%c👋 Hello Developer!',
-      'font-size: 24px; font-weight: bold; color: #8b5cf6;'
+      'font-size: 24px; font-weight: bold; color: #1e40af;'
     );
     console.log(
       '%cThis portfolio is built with Three.js magic ✨',
-      'font-size: 16px; color: #ec4899;'
+      'font-size: 16px; color: #06b6d4;'
     );
     console.log(
       '%cCheck out the code on GitHub: https://github.com/codemeteorite',
-      'font-size: 14px; color: #a78bfa;'
+      'font-size: 14px; color: #60a5fa;'
     );
   </script>
 </body>
-
 </html>
