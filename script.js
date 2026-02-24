@@ -1,54 +1,22 @@
-// ==============================
-// INITIAL DOM READY
-// ==============================
 document.addEventListener("DOMContentLoaded", () => {
 
-  // ==============================
-  // LOADER
-  // ==============================
+  // ================= LOADER =================
   const loader = document.getElementById("loader");
   if (loader) {
     setTimeout(() => {
-      loader.style.transition = "opacity 0.6s ease";
       loader.style.opacity = "0";
     }, 300);
-
     setTimeout(() => loader.remove(), 1000);
   }
 
-  // ==============================
-  // SCROLL REVEAL
-  // ==============================
-  const revealElements = document.querySelectorAll(".reveal");
-  if (revealElements.length) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        }
-      });
-    }, { threshold: 0.15 });
-
-    revealElements.forEach(el => revealObserver.observe(el));
-  }
-
-  // ==============================
-  // MOBILE MENU
-  // ==============================
+  // ================= MOBILE MENU =================
   const btn = document.getElementById("menuBtn");
   const menu = document.getElementById("mobileMenu");
 
   if (btn && menu) {
-
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       menu.classList.toggle("hidden");
-    });
-
-    document.querySelectorAll("#mobileMenu a").forEach(link => {
-      link.addEventListener("click", () => {
-        menu.classList.add("hidden");
-      });
     });
 
     document.addEventListener("click", (e) => {
@@ -58,37 +26,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ==============================
-  // CHAT SYSTEM
-  // ==============================
+  // ================= CHAT =================
   const chatToggle = document.getElementById("chat-toggle");
   const chatBox = document.getElementById("chat-box");
   const chatSend = document.getElementById("chat-send");
   const chatInput = document.getElementById("chat-input-field");
   const chatMessages = document.getElementById("chat-messages");
 
-  if (!chatToggle || !chatBox || !chatSend || !chatInput || !chatMessages) return;
+  if (!chatToggle || !chatBox || !chatSend || !chatInput || !chatMessages) {
+    console.log("Chat elements not found");
+    return;
+  }
 
-  // Ensure proper alignment
   chatMessages.style.display = "flex";
   chatMessages.style.flexDirection = "column";
 
-  // Toggle chat visibility
   chatToggle.addEventListener("click", () => {
     chatBox.classList.toggle("chat-hidden");
   });
 
-  // Create message bubble
-  function createMessage(text, sender = "user") {
+  function createMessage(text, sender) {
     const msg = document.createElement("div");
     msg.textContent = text;
-
     msg.style.marginBottom = "10px";
     msg.style.padding = "8px 12px";
     msg.style.borderRadius = "12px";
     msg.style.maxWidth = "80%";
-    msg.style.fontSize = "13px";
-    msg.style.wordWrap = "break-word";
 
     if (sender === "user") {
       msg.style.background = "#1e40af";
@@ -107,42 +70,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const message = chatInput.value.trim();
     if (!message) return;
 
-    // Add user message
-    const userMsg = createMessage(message, "user");
-    chatMessages.appendChild(userMsg);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+    chatMessages.appendChild(createMessage(message, "user"));
     chatInput.value = "";
 
-    // Add temporary loading bubble
-    const loadingMsg = createMessage("Thinking...", "bot");
-    loadingMsg.style.opacity = "0.6";
-    chatMessages.appendChild(loadingMsg);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+    const loading = createMessage("Thinking...", "bot");
+    loading.style.opacity = "0.6";
+    chatMessages.appendChild(loading);
 
     try {
       const res = await fetch("https://portfolio-backend-3-t5w8.onrender.com/chat", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message })
       });
 
       const data = await res.json();
+      loading.remove();
 
-      loadingMsg.remove();
-
-      const botReply = createMessage(data.reply || "No response received.", "bot");
-      chatMessages.appendChild(botReply);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-
-    } catch (error) {
-      loadingMsg.remove();
-
-      const errorMsg = createMessage("Server is waking up. Try again in a few seconds.", "bot");
-      chatMessages.appendChild(errorMsg);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
+      chatMessages.appendChild(createMessage(data.reply || "No reply", "bot"));
+    } catch (err) {
+      loading.remove();
+      chatMessages.appendChild(createMessage("Server sleeping. Try again.", "bot"));
     }
+
+    chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
   chatSend.addEventListener("click", sendMessage);
