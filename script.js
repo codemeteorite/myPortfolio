@@ -42,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
   chatMessages.style.display = "flex";
   chatMessages.style.flexDirection = "column";
 
+  // Initial greeting
+  chatMessages.appendChild(createMessage("Hey! I am Abu 🙈 Yahiya's Non Existent Assistant! How can I be useful to you?", "bot"));
+
   chatToggle.addEventListener("click", () => {
     chatBox.classList.toggle("chat-hidden");
   });
@@ -85,10 +88,14 @@ document.addEventListener("DOMContentLoaded", () => {
         body: JSON.stringify({ message })
       });
 
-      const data = await res.json();
       loading.remove();
 
-      chatMessages.appendChild(createMessage(data.reply || "No reply", "bot"));
+      if (res.status === 429 || res.status === 500) {
+        chatMessages.appendChild(createMessage("Sorry, My Working Hours are done. I'll be back Tommorrow 😴", "bot"));
+      } else {
+        const data = await res.json();
+        chatMessages.appendChild(createMessage(data.reply || "No reply", "bot"));
+      }
     } catch (err) {
       loading.remove();
       chatMessages.appendChild(createMessage("Server sleeping. Try again.", "bot"));

@@ -29,8 +29,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -63,7 +65,9 @@
       color: #fff;
     }
 
-    h1, h2, h3 {
+    h1,
+    h2,
+    h3 {
       font-family: 'Orbitron', sans-serif;
       font-weight: 800;
       letter-spacing: 0.05em;
@@ -125,9 +129,9 @@
       backdrop-filter: blur(30px);
       border: 2px solid rgba(30, 64, 175, 0.3);
       border-radius: 1.5rem;
-      box-shadow: 0 8px 32px rgba(30, 64, 175, 0.2), 
-                  0 0 80px rgba(6, 182, 212, 0.15),
-                  inset 0 0 60px rgba(30, 64, 175, 0.05);
+      box-shadow: 0 8px 32px rgba(30, 64, 175, 0.2),
+        0 0 80px rgba(6, 182, 212, 0.15),
+        inset 0 0 60px rgba(30, 64, 175, 0.05);
       position: relative;
       overflow: hidden;
     }
@@ -145,8 +149,15 @@
     }
 
     @keyframes shimmer {
-      0%, 100% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-      50% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+
+      0%,
+      100% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+      }
+
+      50% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+      }
     }
 
     .hero {
@@ -183,12 +194,15 @@
     }
 
     @keyframes pulse {
-      0%, 100% { 
-        opacity: 1; 
+
+      0%,
+      100% {
+        opacity: 1;
         text-shadow: 0 0 30px rgba(30, 64, 175, 1), 0 0 60px rgba(6, 182, 212, 0.5);
       }
-      50% { 
-        opacity: 0.7; 
+
+      50% {
+        opacity: 0.7;
         text-shadow: 0 0 50px rgba(6, 182, 212, 1), 0 0 80px rgba(30, 64, 175, 0.5);
       }
     }
@@ -230,21 +244,60 @@
     }
 
     @keyframes float {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-10px); }
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
     }
 
-    .skill-icon:nth-child(1) { animation-delay: 0s; }
-    .skill-icon:nth-child(2) { animation-delay: 0.2s; }
-    .skill-icon:nth-child(3) { animation-delay: 0.4s; }
-    .skill-icon:nth-child(4) { animation-delay: 0.6s; }
-    .skill-icon:nth-child(5) { animation-delay: 0.8s; }
-    .skill-icon:nth-child(6) { animation-delay: 1s; }
-    .skill-icon:nth-child(7) { animation-delay: 1.2s; }
-    .skill-icon:nth-child(8) { animation-delay: 1.4s; }
-    .skill-icon:nth-child(9) { animation-delay: 1.6s; }
-    .skill-icon:nth-child(10) { animation-delay: 1.8s; }
-    .skill-icon:nth-child(11) { animation-delay: 2s; }
+    .skill-icon:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .skill-icon:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .skill-icon:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .skill-icon:nth-child(4) {
+      animation-delay: 0.6s;
+    }
+
+    .skill-icon:nth-child(5) {
+      animation-delay: 0.8s;
+    }
+
+    .skill-icon:nth-child(6) {
+      animation-delay: 1s;
+    }
+
+    .skill-icon:nth-child(7) {
+      animation-delay: 1.2s;
+    }
+
+    .skill-icon:nth-child(8) {
+      animation-delay: 1.4s;
+    }
+
+    .skill-icon:nth-child(9) {
+      animation-delay: 1.6s;
+    }
+
+    .skill-icon:nth-child(10) {
+      animation-delay: 1.8s;
+    }
+
+    .skill-icon:nth-child(11) {
+      animation-delay: 2s;
+    }
 
     /* Social Card 3D */
     .social-card {
@@ -285,8 +338,13 @@
     }
 
     @keyframes rotate-border {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
     .neon-border {
@@ -297,17 +355,34 @@
     }
 
     @keyframes border-flow {
-      0% { border-image-source: linear-gradient(0deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
-      25% { border-image-source: linear-gradient(90deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
-      50% { border-image-source: linear-gradient(180deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
-      75% { border-image-source: linear-gradient(270deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
-      100% { border-image-source: linear-gradient(360deg, #1e40af, #06b6d4, #3b82f6, #1e40af); }
+      0% {
+        border-image-source: linear-gradient(0deg, #1e40af, #06b6d4, #3b82f6, #1e40af);
+      }
+
+      25% {
+        border-image-source: linear-gradient(90deg, #1e40af, #06b6d4, #3b82f6, #1e40af);
+      }
+
+      50% {
+        border-image-source: linear-gradient(180deg, #1e40af, #06b6d4, #3b82f6, #1e40af);
+      }
+
+      75% {
+        border-image-source: linear-gradient(270deg, #1e40af, #06b6d4, #3b82f6, #1e40af);
+      }
+
+      100% {
+        border-image-source: linear-gradient(360deg, #1e40af, #06b6d4, #3b82f6, #1e40af);
+      }
     }
 
     @keyframes glow-pulse {
-      0%, 100% {
+
+      0%,
+      100% {
         text-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
       }
+
       50% {
         text-shadow: 0 0 30px currentColor, 0 0 60px currentColor, 0 0 90px currentColor;
       }
@@ -329,6 +404,7 @@
         opacity: 0;
         transform: translateX(-50px);
       }
+
       to {
         opacity: 1;
         transform: translateX(0);
@@ -361,10 +437,13 @@
     }
 
     @keyframes pulse-dot {
-      0%, 100% {
+
+      0%,
+      100% {
         box-shadow: 0 0 20px rgba(6, 182, 212, 0.8);
         transform: scale(1);
       }
+
       50% {
         box-shadow: 0 0 30px rgba(6, 182, 212, 1);
         transform: scale(1.2);
@@ -396,7 +475,7 @@
     .btn-3d:hover::before {
       transform: translateZ(-20px);
     }
-    
+
     /* Floating particles cursor */
     .cursor-particle {
       position: fixed;
@@ -465,8 +544,15 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Tech stack icons */
@@ -476,99 +562,100 @@
       align-items: center;
       justify-content: center;
     }
-      /* ===== CHAT WIDGET ===== */
 
-  #chat-widget {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 10001;
-    font-family: 'Space Mono', monospace;
-  }
+    /* ===== CHAT WIDGET ===== */
 
-  #chat-toggle {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #1e40af, #06b6d4);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    transition: 0.3s ease;
-  }
+    #chat-widget {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 10001;
+      font-family: 'Space Mono', monospace;
+    }
 
-  #chat-toggle:hover {
-    transform: scale(1.1);
-  }
+    #chat-toggle {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, #1e40af, #06b6d4);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: 0.3s ease;
+    }
 
-  #chat-box {
-    width: 320px;
-    height: 420px;
-    background: #0f172a;
-    border-radius: 16px;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-  }
+    #chat-toggle:hover {
+      transform: scale(1.1);
+    }
 
-  .chat-hidden {
-    display: none;
-  }
+    #chat-box {
+      width: 320px;
+      height: 420px;
+      background: #0f172a;
+      border-radius: 16px;
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    }
 
-  .chat-header {
-    padding: 14px;
-    font-weight: bold;
-    background: linear-gradient(135deg, #1e40af, #06b6d4);
-    text-align: center;
-    color: white;
-  }
+    .chat-hidden {
+      display: none !important;
+    }
 
-  #chat-messages {
-    flex: 1;
-    padding: 15px;
-    overflow-y: auto;
-    color: #e2e8f0;
-    font-size: 14px;
-  }
+    .chat-header {
+      padding: 14px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #1e40af, #06b6d4);
+      text-align: center;
+      color: white;
+    }
 
-  .chat-input {
-    display: flex;
-    border-top: 1px solid #1f2937;
-  }
+    #chat-messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      color: #e2e8f0;
+      font-size: 14px;
+    }
 
-  #chat-input-field {
-    flex: 1;
-    padding: 12px;
-    background: #111827;
-    color: white;
-    border: none;
-    outline: none;
-    font-size: 14px;
-  }
+    .chat-input {
+      display: flex;
+      border-top: 1px solid #1f2937;
+    }
 
-  #chat-input-field::placeholder {
-    color: #94a3b8;
-  }
+    #chat-input-field {
+      flex: 1;
+      padding: 12px;
+      background: #111827;
+      color: white;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
 
-  #chat-send {
-    padding: 12px 16px;
-    border: none;
-    background: linear-gradient(135deg, #1e40af, #06b6d4);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.2s ease;
-  }
+    #chat-input-field::placeholder {
+      color: #94a3b8;
+    }
 
-  #chat-send:hover {
-    opacity: 0.85;
-  }
+    #chat-send {
+      padding: 12px 16px;
+      border: none;
+      background: linear-gradient(135deg, #1e40af, #06b6d4);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s ease;
+    }
+
+    #chat-send:hover {
+      opacity: 0.85;
+    }
   </style>
 </head>
 
@@ -578,7 +665,9 @@
 
   <!-- Loader -->
   <div id="loader">
-    <p class="text-xl md:text-3xl font-bold animate-pulse" style="background: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Loading Portfolio</p>
+    <p class="text-xl md:text-3xl font-bold animate-pulse"
+      style="background: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+      Loading Portfolio</p>
   </div>
 
   <div class="content-layer">
@@ -594,14 +683,10 @@
           <a href="#experience">Experience</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
-          <a 
-  href="https://drive.google.com/file/d/1SI93OCf5OLCkvZs2-GfU_m6uAyo-k4Zp/view"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="border border-blue-400 px-3 py-1 rounded hover:bg-blue-400/20 transition"
->
-  View Resume
-</a>
+          <a href="https://drive.google.com/file/d/1SI93OCf5OLCkvZs2-GfU_m6uAyo-k4Zp/view" target="_blank"
+            rel="noopener noreferrer" class="border border-blue-400 px-3 py-1 rounded hover:bg-blue-400/20 transition">
+            View Resume
+          </a>
         </div>
 
         <!-- Mobile Button -->
@@ -623,31 +708,34 @@
     <!-- Hero -->
     <section class="hero px-6">
       <div class="glass p-10 md:p-16 rounded-3xl max-w-3xl reveal neon-border">
-        <h1 class="text-4xl md:text-7xl font-extrabold glow-text mb-4" style="background: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        <h1 class="text-4xl md:text-7xl font-extrabold glow-text mb-4"
+          style="background: linear-gradient(135deg, #1e40af 0%, #06b6d4 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
           MOHD YAHIYA
         </h1>
         <p class="mt-6 text-xl md:text-2xl text-gray-300 uppercase tracking-wider font-bold">Full Stack Developer</p>
         <p class="mt-6 italic text-blue-400 text-lg md:text-xl font-mono">&lt; Code. Eat. Repeat. /&gt;</p>
         <div class="mt-10 flex flex-col sm:flex-row gap-6 justify-center">
-         <a 
-  href="https://drive.google.com/uc?export=download&id=1SI93OCf5OLCkvZs2-GfU_m6uAyo-k4Zp"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-blue-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group relative"
->
-  <span class="group-hover:text-blue-300 flex items-center justify-center gap-3">
-    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"/>
-      <path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/>
-    </svg>
-    View Resume
-  </span>
-</a>
-          <a href="#experience" class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-cyan-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group">
+          <a href="https://drive.google.com/uc?export=download&id=1SI93OCf5OLCkvZs2-GfU_m6uAyo-k4Zp" target="_blank"
+            rel="noopener noreferrer"
+            class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-blue-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group relative">
+            <span class="group-hover:text-blue-300 flex items-center justify-center gap-3">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z" />
+                <path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z" />
+              </svg>
+              View Resume
+            </span>
+          </a>
+          <a href="#experience"
+            class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-cyan-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group">
             <span class="group-hover:text-cyan-300 flex items-center justify-center gap-3">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
-                <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                <path fill-rule="evenodd"
+                  d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                  clip-rule="evenodd" />
+                <path
+                  d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
               </svg>
               Experience
             </span>
@@ -661,8 +749,10 @@
       <h2 class="text-4xl md:text-5xl font-bold mb-10 glow-text">ABOUT ME</h2>
       <div class="max-w-4xl mx-auto glass p-10 md:p-12 rounded-3xl">
         <p class="text-gray-300 leading-relaxed text-base md:text-lg">
-          Passionate full-stack developer with <span class="text-blue-400 font-bold">500+ hours</span> of coding and a <span class="text-cyan-400 font-bold">500+ day</span> coding streak.
-          Obsessed with building <span class="text-cyan-400 font-bold">clean systems</span> and <span class="text-blue-400 font-bold">beautiful interfaces</span>.
+          Passionate full-stack developer with <span class="text-blue-400 font-bold">500+ hours</span> of coding and a
+          <span class="text-cyan-400 font-bold">500+ day</span> coding streak.
+          Obsessed with building <span class="text-cyan-400 font-bold">clean systems</span> and <span
+            class="text-blue-400 font-bold">beautiful interfaces</span>.
         </p>
       </div>
     </section>
@@ -670,10 +760,10 @@
     <!-- Skills -->
     <section id="skills" class="py-24 px-6 text-center reveal">
       <h2 class="text-4xl md:text-5xl font-bold mb-16 glow-text">TECH ARSENAL</h2>
-      
+
       <div class="max-w-6xl mx-auto glass p-12 md:p-16">
         <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12">
-          
+
           <!-- React -->
           <div class="skill-icon flex flex-col items-center gap-3">
             <i class="devicon-react-original text-6xl md:text-8xl" style="color: #61dafb;"></i>
@@ -705,10 +795,10 @@
           </div>
 
           <!-- Python -->
-<div class="skill-icon flex flex-col items-center gap-3">
-  <i class="devicon-python-plain text-6xl md:text-8xl" style="color: #3776ab;"></i>
-  <span class="text-xs md:text-sm font-bold text-blue-400 uppercase tracking-wider">Python</span>
-</div>
+          <div class="skill-icon flex flex-col items-center gap-3">
+            <i class="devicon-python-plain text-6xl md:text-8xl" style="color: #3776ab;"></i>
+            <span class="text-xs md:text-sm font-bold text-blue-400 uppercase tracking-wider">Python</span>
+          </div>
           <!-- Tailwind -->
           <div class="skill-icon flex flex-col items-center gap-3">
             <i class="devicon-tailwindcss-plain text-6xl md:text-8xl" style="color: #06b6d4;"></i>
@@ -723,11 +813,12 @@
 
           <!-- Claude AI -->
           <div class="skill-icon flex flex-col items-center gap-3">
-            <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 24 24" fill="none" style="filter: drop-shadow(0 0 10px #0ea5e9);">
-              <circle cx="12" cy="12" r="10" fill="#0ea5e9"/>
-              <path d="M8 10h8M8 14h8" stroke="white" stroke-width="2" stroke-linecap="round"/>
-              <circle cx="10" cy="10" r="1" fill="white"/>
-              <circle cx="14" cy="10" r="1" fill="white"/>
+            <svg class="w-16 h-16 md:w-20 md:h-20" viewBox="0 0 24 24" fill="none"
+              style="filter: drop-shadow(0 0 10px #0ea5e9);">
+              <circle cx="12" cy="12" r="10" fill="#0ea5e9" />
+              <path d="M8 10h8M8 14h8" stroke="white" stroke-width="2" stroke-linecap="round" />
+              <circle cx="10" cy="10" r="1" fill="white" />
+              <circle cx="14" cy="10" r="1" fill="white" />
             </svg>
             <span class="text-xs md:text-sm font-bold text-cyan-500 uppercase tracking-wider">Claude AI</span>
           </div>
@@ -759,7 +850,7 @@
       <h2 class="text-4xl md:text-5xl font-bold mb-16 text-center glow-text">EXPERIENCE</h2>
 
       <div class="max-w-5xl mx-auto space-y-12">
-        
+
         <!-- Timeline Item 1 -->
         <div class="timeline-item glass p-8 md:p-10 neon-border rounded-2xl">
           <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-6">
@@ -769,17 +860,20 @@
             </div>
             <div class="flex items-center gap-3">
               <div class="hidden md:block w-3 h-3 rounded-full bg-blue-400" style="box-shadow: 0 0 10px #60a5fa;"></div>
-              <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-wider">Apr 2025 – Oct 2025</span>
+              <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-wider">Apr 2025 – Oct
+                2025</span>
             </div>
           </div>
-          
+
           <div class="flex items-center gap-3 mb-4">
             <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd" />
             </svg>
             <p class="text-gray-400 font-bold text-sm md:text-base">Li2, Hyderabad</p>
           </div>
-          
+
           <p class="text-gray-300 leading-relaxed">
             Team Lead & Outreach Manager, managing execution, customers and stakeholders in fast-paced projects.
           </p>
@@ -794,17 +888,20 @@
             </div>
             <div class="flex items-center gap-3">
               <div class="hidden md:block w-3 h-3 rounded-full bg-blue-400" style="box-shadow: 0 0 10px #60a5fa;"></div>
-              <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-wider">Sep 2024 – Feb 2025</span>
+              <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-wider">Sep 2024 – Feb
+                2025</span>
             </div>
           </div>
-          
+
           <div class="flex items-center gap-3 mb-4">
             <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd" />
             </svg>
             <p class="text-gray-400 font-bold text-sm md:text-base">Hexart, Hyderabad</p>
           </div>
-          
+
           <p class="text-gray-300 leading-relaxed">
             Associate Web Developer on 4+ production apps, fixed 50+ bugs, optimized performance.
           </p>
@@ -819,17 +916,20 @@
             </div>
             <div class="flex items-center gap-3">
               <div class="hidden md:block w-3 h-3 rounded-full bg-blue-400" style="box-shadow: 0 0 10px #60a5fa;"></div>
-              <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-wider">Jul 2024 – Sep 2024</span>
+              <span class="text-blue-400 text-sm md:text-base font-bold uppercase tracking-wider">Jul 2024 – Sep
+                2024</span>
             </div>
           </div>
-          
+
           <div class="flex items-center gap-3 mb-4">
             <svg class="w-5 h-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd" />
             </svg>
             <p class="text-gray-400 font-bold text-sm md:text-base">NxtWave, Virtual</p>
           </div>
-          
+
           <p class="text-gray-300 leading-relaxed">
             Mentored learners and strengthened communication & leadership skills.
           </p>
@@ -844,11 +944,13 @@
 
       <div class="max-w-2xl mx-auto glass p-12 md:p-16 rounded-3xl neon-border">
         <div class="flex flex-col items-center gap-6">
-          <i class="fa-solid fa-eye text-5xl md:text-6xl" style="color: #60a5fa; filter: drop-shadow(0 0 20px #60a5fa);"></i>
-          
+          <i class="fa-solid fa-eye text-5xl md:text-6xl"
+            style="color: #60a5fa; filter: drop-shadow(0 0 20px #60a5fa);"></i>
+
           <div>
             <p class="text-gray-400 text-sm md:text-base uppercase tracking-widest mb-4 font-bold">Total Visitors</p>
-            <p id="visitorCount" class="stat-number text-5xl md:text-7xl font-black glow-text" style="color: #06b6d4;">—</p>
+            <p id="visitorCount" class="stat-number text-5xl md:text-7xl font-black glow-text" style="color: #06b6d4;">—
+            </p>
           </div>
 
           <div class="mt-4 flex items-center gap-3">
@@ -872,7 +974,8 @@
             <div class="rounded-3xl glass p-8 h-full flex flex-col justify-between">
               <div>
                 <h3 class="text-2xl md:text-3xl font-bold mb-3 text-blue-300">Homify</h3>
-                <p class="text-gray-400 mb-8 leading-relaxed">Full-stack property rental platform with booking, reviews, and payment integration</p>
+                <p class="text-gray-400 mb-8 leading-relaxed">Full-stack property rental platform with booking, reviews,
+                  and payment integration</p>
 
                 <div class="flex gap-4 text-4xl md:text-5xl mb-8">
                   <i class="devicon-react-original" style="color: #61dafb;"></i>
@@ -881,37 +984,43 @@
                   <i class="devicon-tailwindcss-plain" style="color: #06b6d4;"></i>
                   <!-- Express -->
                   <div class="tech-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #ffffff;">
-                      <path d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full" style="color: #ffffff;">
+                      <path
+                        d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z" />
                     </svg>
                   </div>
                   <!-- bcrypt -->
                   <div class="tech-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #00a8ff;">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full" style="color: #00a8ff;">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
                     </svg>
                   </div>
                   <!-- MongoDB Compass -->
                   <div class="tech-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #4db33d;">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full" style="color: #4db33d;">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
                     </svg>
                   </div>
                   <!-- ImageKit -->
                   <div class="tech-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #f15a24;">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full" style="color: #f15a24;">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z" />
                     </svg>
                   </div>
                 </div>
 
                 <div class="project-buttons">
-                  <a href="https://github.com/codemeteorite/Homify/" target="_blank"
-                    class="project-btn btn-repo">
+                  <a href="https://github.com/codemeteorite/Homify/" target="_blank" class="project-btn btn-repo">
                     View Repo
                   </a>
-                  <a href="https://homify-7mw5.onrender.com/" target="_blank"
-                    class="project-btn btn-live">
+                  <a href="https://homify-7mw5.onrender.com/" target="_blank" class="project-btn btn-live">
                     Peek Live
                   </a>
                 </div>
@@ -933,26 +1042,34 @@
                   <i class="devicon-tailwindcss-plain" style="color: #06b6d4;"></i>
                   <!-- Express -->
                   <div class="tech-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #ffffff;">
-                      <path d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 a6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full" style="color: #ffffff;">
+                      <path
+                        d="M24 18.588a1.529 1.529 0 01-1.895-.72l-3.45-4.771-.5-.667-4.003 5.444a1.466 1.466 0 01-1.802.708l5.158-6.92-4.798-6.251a1.595 1.595 0 011.9.666l3.576 4.83 3.596-4.81a1.435 1.435 0 011.788-.668L21.708 7.9l-2.522 3.283a.666.666 0 000 .994l4.804 6.412zM.002 11.576l.42-2.075c1.154-4.103 5.858-5.81 9.094-3.27 1.895 1.489 2.368 3.597 2.275 5.973H1.116C.943 16.447 4.005 19.009 7.92 17.7a4.078 4.078 0 002.582-2.876c.207-.666.548-.78 1.174-.588a5.417 5.417 0 01-2.589 3.957 a6.272 6.272 0 01-7.306-.933 6.575 6.575 0 01-1.64-3.858c0-.235-.08-.455-.134-.666A88.33 88.33 0 010 11.577zm1.127-.286h9.654c-.06-3.076-2.001-5.258-4.59-5.278-2.882-.04-4.944 2.094-5.071 5.264z" />
                     </svg>
                   </div>
                   <!-- bcrypt -->
                   <div class="tech-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #00a8ff;">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full" style="color: #00a8ff;">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z" />
                     </svg>
                   </div>
                   <!-- MongoDB Compass -->
                   <div class="tech-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #4db33d;">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full" style="color: #4db33d;">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
                     </svg>
                   </div>
                   <!-- ImageKit -->
                   <div class="tech-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-full h-full" style="color: #f15a24;">
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z"/>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="w-full h-full" style="color: #f15a24;">
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm1-13h-2v6h2V7zm0 8h-2v2h2v-2z" />
                     </svg>
                   </div>
                 </div>
@@ -962,8 +1079,7 @@
                     class="project-btn btn-repo">
                     View Repo
                   </a>
-                  <a href="#" target="_blank"
-                    class="project-btn btn-live">
+                  <a href="#" target="_blank" class="project-btn btn-live">
                     Peek Live
                   </a>
                 </div>
@@ -989,8 +1105,7 @@
                     class="project-btn btn-repo">
                     View Repo
                   </a>
-                  <a href="https://simonsaysdev.netlify.app/" target="_blank"
-                    class="project-btn btn-live">
+                  <a href="https://simonsaysdev.netlify.app/" target="_blank" class="project-btn btn-live">
                     Peek Live
                   </a>
                 </div>
@@ -1020,8 +1135,7 @@
                       class="project-btn btn-repo">
                       View Repo
                     </a>
-                    <a href="https://typemasters.ccbp.tech/" target="_blank"
-                      class="project-btn btn-live">
+                    <a href="https://typemasters.ccbp.tech/" target="_blank" class="project-btn btn-live">
                       Peek Live
                     </a>
                   </div>
@@ -1033,11 +1147,13 @@
 
         <!-- See More Button -->
         <div class="text-center mt-16">
-          <button id="seeMoreBtn" 
+          <button id="seeMoreBtn"
             class="btn-3d neon-border px-8 py-4 rounded-xl text-center hover:bg-blue-400/20 transition font-bold uppercase tracking-wider text-sm md:text-base group">
             <span class="group-hover:text-blue-300 flex items-center justify-center gap-3">
               <svg class="w-5 h-5 transition-transform group-hover:rotate-180" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
               </svg>
               See More Projects
             </span>
@@ -1057,81 +1173,93 @@
       </p>
 
       <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        
+
         <!-- LinkedIn Card -->
         <a href="https://www.linkedin.com/in/yahiyamohd/" target="_blank"
-          class="social-card glass p-10 rounded-3xl block neon-border group"
-          style="color: #0077B5;">
+          class="social-card glass p-10 rounded-3xl block neon-border group" style="color: #0077B5;">
           <div class="flex flex-col items-center gap-6">
             <!-- 3D Animated Icon -->
             <div class="icon-3d relative">
-              <div class="absolute inset-0 bg-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
+              <div
+                class="absolute inset-0 bg-blue-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition">
+              </div>
               <div class="relative bg-gradient-to-br from-blue-600 to-blue-800 p-6 rounded-2xl">
                 <i class="fa-brands fa-linkedin text-6xl md:text-7xl text-white"></i>
               </div>
             </div>
-            
+
             <div class="text-center">
               <h3 class="font-black text-2xl md:text-3xl mb-3 uppercase tracking-wide">LinkedIn</h3>
               <p class="text-sm md:text-base text-gray-400 font-mono">yahiyamohd</p>
             </div>
           </div>
-          <div class="mt-6 text-sm md:text-base font-bold uppercase tracking-wider opacity-75 group-hover:opacity-100 transition flex items-center justify-center gap-2">
+          <div
+            class="mt-6 text-sm md:text-base font-bold uppercase tracking-wider opacity-75 group-hover:opacity-100 transition flex items-center justify-center gap-2">
             <span>Connect</span>
             <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
             </svg>
           </div>
         </a>
 
         <!-- GitHub Card -->
-        <a href="https://github.com/codemeteorite" target="_blank" 
-          class="social-card glass p-10 rounded-3xl block neon-border group"
-          style="color: #8A2BE2;">
+        <a href="https://github.com/codemeteorite" target="_blank"
+          class="social-card glass p-10 rounded-3xl block neon-border group" style="color: #8A2BE2;">
           <div class="flex flex-col items-center gap-6">
             <!-- 3D Animated Icon -->
             <div class="icon-3d relative">
-              <div class="absolute inset-0 bg-purple-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
+              <div
+                class="absolute inset-0 bg-purple-600 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition">
+              </div>
               <div class="relative bg-gradient-to-br from-purple-600 to-purple-800 p-6 rounded-2xl">
                 <i class="fa-brands fa-github text-6xl md:text-7xl text-white"></i>
               </div>
             </div>
-            
+
             <div class="text-center">
               <h3 class="font-black text-2xl md:text-3xl mb-3 uppercase tracking-wide">GitHub</h3>
               <p class="text-sm md:text-base text-gray-400 font-mono">codemeteorite</p>
             </div>
           </div>
-          <div class="mt-6 text-sm md:text-base font-bold uppercase tracking-wider opacity-75 group-hover:opacity-100 transition flex items-center justify-center gap-2">
+          <div
+            class="mt-6 text-sm md:text-base font-bold uppercase tracking-wider opacity-75 group-hover:opacity-100 transition flex items-center justify-center gap-2">
             <span>View Code</span>
             <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
             </svg>
           </div>
         </a>
 
         <!-- Instagram Card -->
         <a href="https://www.instagram.com/mohdyahiya_/" target="_blank"
-          class="social-card glass p-10 rounded-3xl block neon-border group"
-          style="color: #E4405F;">
+          class="social-card glass p-10 rounded-3xl block neon-border group" style="color: #E4405F;">
           <div class="flex flex-col items-center gap-6">
             <!-- 3D Animated Icon -->
             <div class="icon-3d relative">
-              <div class="absolute inset-0 bg-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition"></div>
+              <div
+                class="absolute inset-0 bg-pink-500 rounded-2xl blur-xl opacity-50 group-hover:opacity-75 transition">
+              </div>
               <div class="relative bg-gradient-to-br from-pink-500 to-pink-700 p-6 rounded-2xl">
                 <i class="fa-brands fa-instagram text-6xl md:text-7xl text-white"></i>
               </div>
             </div>
-            
+
             <div class="text-center">
               <h3 class="font-black text-2xl md:text-3xl mb-3 uppercase tracking-wide">Instagram</h3>
               <p class="text-sm md:text-base text-gray-400 font-mono">@mohdyahiya_</p>
             </div>
           </div>
-          <div class="mt-6 text-sm md:text-base font-bold uppercase tracking-wider opacity-75 group-hover:opacity-100 transition flex items-center justify-center gap-2">
+          <div
+            class="mt-6 text-sm md:text-base font-bold uppercase tracking-wider opacity-75 group-hover:opacity-100 transition flex items-center justify-center gap-2">
             <span>Follow</span>
             <svg class="w-5 h-5 group-hover:translate-x-2 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+              <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd" />
             </svg>
           </div>
         </a>
@@ -1157,7 +1285,7 @@
 
     function init3D() {
       const container = document.getElementById('canvas-container');
-      
+
       // Scene
       scene = new THREE.Scene();
       scene.fog = new THREE.FogExp2(0x000000, 0.002);
@@ -1194,7 +1322,7 @@
 
       for (let i = 0; i < particleCount; i++) {
         const i3 = i * 3;
-        
+
         // Position
         positions[i3] = (Math.random() - 0.5) * 300;
         positions[i3 + 1] = (Math.random() - 0.5) * 300;
@@ -1348,7 +1476,7 @@
     // ===== INITIALIZATION =====
     window.addEventListener('load', () => {
       init3D();
-      
+
       setTimeout(() => {
         document.getElementById('loader').style.display = 'none';
       }, 2000);
@@ -1436,7 +1564,7 @@
         e.preventDefault();
         const targetId = this.getAttribute('href');
         if (targetId === '#') return;
-        
+
         const targetElement = document.querySelector(targetId);
         if (targetElement) {
           window.scrollTo({
@@ -1453,7 +1581,7 @@
 
     seeMoreBtn.addEventListener('click', () => {
       hiddenProjects.classList.toggle('active');
-      
+
       if (hiddenProjects.classList.contains('active')) {
         seeMoreBtn.innerHTML = `
           <span class="group-hover:text-blue-300 flex items-center justify-center gap-3">
@@ -1481,7 +1609,7 @@
         const rect = icon.getBoundingClientRect();
         const x = rect.left + rect.width / 2;
         const y = rect.top + rect.height / 2;
-        
+
         // Create ripple effect
         const ripple = document.createElement('div');
         ripple.style.position = 'fixed';
@@ -1495,15 +1623,15 @@
         ripple.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         ripple.style.zIndex = '1';
         ripple.style.pointerEvents = 'none';
-        
+
         document.body.appendChild(ripple);
-        
+
         requestAnimationFrame(() => {
           ripple.style.width = '200px';
           ripple.style.height = '200px';
           ripple.style.opacity = '0';
         });
-        
+
         setTimeout(() => {
           ripple.remove();
         }, 600);
@@ -1515,7 +1643,7 @@
     if (heroText) {
       const originalText = heroText.textContent;
       heroText.textContent = '';
-      
+
       let i = 0;
       function typeWriter() {
         if (i < originalText.length) {
@@ -1524,7 +1652,7 @@
           setTimeout(typeWriter, 50);
         }
       }
-      
+
       // Start typing after 1 second
       setTimeout(typeWriter, 1000);
     }
@@ -1559,7 +1687,7 @@
         cursor.style.height = '40px';
         cursor.style.backgroundColor = 'rgba(6, 182, 212, 0.7)';
       });
-      
+
       element.addEventListener('mouseleave', () => {
         cursor.style.width = '20px';
         cursor.style.height = '20px';
@@ -1578,15 +1706,15 @@
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateY = ((x - centerX) / centerX) * 10;
         const rotateX = ((centerY - y) / centerY) * 10;
-        
+
         card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-12px) scale(1.02)`;
-        
+
         // Add shine effect
         const shine = document.createElement('div');
         shine.style.position = 'absolute';
@@ -1599,14 +1727,14 @@
         shine.style.transform = 'translate(-50%, -50%)';
         shine.style.pointerEvents = 'none';
         shine.style.zIndex = '1';
-        
+
         card.appendChild(shine);
-        
+
         setTimeout(() => {
           shine.remove();
         }, 300);
       });
-      
+
       card.addEventListener('mouseleave', () => {
         card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)';
       });
@@ -1618,21 +1746,21 @@
         const rect = card.getBoundingClientRect();
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        
+
         const centerX = rect.width / 2;
         const centerY = rect.height / 2;
-        
+
         const rotateY = ((x - centerX) / centerX) * 20;
         const rotateX = ((centerY - y) / centerY) * 20;
-        
+
         card.style.transform = `translateY(-20px) rotateY(${rotateY}deg) rotateX(${rotateX}deg) scale(1.05)`;
-        
+
         // Create particles
         for (let i = 0; i < 5; i++) {
           createParticle(card, x, y);
         }
       });
-      
+
       card.addEventListener('mouseleave', () => {
         card.style.transform = 'translateY(0) rotateY(0) rotateX(0) scale(1)';
       });
@@ -1649,33 +1777,33 @@
       particle.style.borderRadius = '50%';
       particle.style.pointerEvents = 'none';
       particle.style.zIndex = '2';
-      
+
       card.appendChild(particle);
-      
+
       const angle = Math.random() * Math.PI * 2;
       const speed = 2 + Math.random() * 3;
       const vx = Math.cos(angle) * speed;
       const vy = Math.sin(angle) * speed;
-      
+
       let posX = 0;
       let posY = 0;
       let opacity = 1;
-      
+
       function animateParticle() {
         posX += vx;
         posY += vy;
         opacity -= 0.03;
-        
+
         particle.style.transform = `translate(${posX}px, ${posY}px)`;
         particle.style.opacity = opacity;
-        
+
         if (opacity > 0) {
           requestAnimationFrame(animateParticle);
         } else {
           particle.remove();
         }
       }
-      
+
       animateParticle();
     }
 
@@ -1704,7 +1832,7 @@
       const scrollY = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollPercent = scrollY / docHeight;
-      
+
       // Create color based on scroll position (Dark Blue to Darker Blue)
       const hue = 220 + scrollPercent * 40;
       const bgColor = `hsl(${hue}, 80%, 3%)`;
@@ -1720,7 +1848,7 @@
         const loader = document.getElementById('loader');
         loader.style.opacity = '0';
         loader.style.transition = 'opacity 0.5s ease';
-        
+
         setTimeout(() => {
           loader.style.display = 'none';
         }, 500);
@@ -1733,7 +1861,7 @@
       emailElement.addEventListener('click', (e) => {
         e.preventDefault();
         const email = emailElement.textContent;
-        
+
         navigator.clipboard.writeText(email).then(() => {
           // Show copied notification
           const notification = document.createElement('div');
@@ -1749,9 +1877,9 @@
           notification.style.fontFamily = "'Space Mono', monospace";
           notification.style.fontWeight = 'bold';
           notification.style.boxShadow = '0 10px 30px rgba(0,0,0,0.3)';
-          
+
           document.body.appendChild(notification);
-          
+
           setTimeout(() => {
             notification.style.opacity = '0';
             notification.style.transition = 'opacity 0.5s ease';
@@ -1770,7 +1898,7 @@
           mobileMenu.classList.add('hidden');
         }
       }
-      
+
       // Space to toggle projects
       if (e.key === ' ' && e.target === document.body) {
         e.preventDefault();
@@ -1802,33 +1930,24 @@
       'font-size: 14px; color: #60a5fa;'
     );
 
-    document.addEventListener("DOMContentLoaded", () => {
-  const chatToggle = document.getElementById("chat-toggle");
-  const chatBox = document.getElementById("chat-box");
 
-  if (chatToggle && chatBox) {
-    chatToggle.addEventListener("click", () => {
-      chatBox.classList.toggle("chat-hidden");
-    });
-  }
-});
 
-    
   </script>
-<div id="chat-widget">
-  <div id="chat-toggle">
-    <i class="fa-solid fa-comment"></i>
-  </div>
+  <div id="chat-widget">
+    <div id="chat-toggle">
+      <i class="fa-solid fa-comment"></i>
+    </div>
 
-  <div id="chat-box" class="chat-hidden">
-    <div class="chat-header">Ask Yahiya AI</div>
-    <div id="chat-messages"></div>
-    <div class="chat-input">
-      <input type="text" id="chat-input-field" placeholder="Type your message..." />
-      <button id="chat-send">Send</button>
+    <div id="chat-box" class="chat-hidden">
+      <div class="chat-header">Talk with Abu</div>
+      <div id="chat-messages"></div>
+      <div class="chat-input">
+        <input type="text" id="chat-input-field" placeholder="Type your message..." />
+        <button id="chat-send">Send</button>
+      </div>
     </div>
   </div>
-</div>
-
+  <script src="script.js"></script>
 </body>
+
 </html>
