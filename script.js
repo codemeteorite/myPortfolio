@@ -42,3 +42,59 @@ document.addEventListener("click", (e) => {
     menu.classList.add("hidden");
   }
 });
+
+
+
+
+
+// ===== CHAT TOGGLE =====
+const chatToggle = document.getElementById("chat-toggle");
+const chatBox = document.getElementById("chat-box");
+const chatSend = document.getElementById("chat-send");
+const chatInput = document.getElementById("chat-input-field");
+const chatMessages = document.getElementById("chat-messages");
+
+chatToggle.addEventListener("click", () => {
+  chatBox.classList.toggle("chat-hidden");
+});
+
+// Add message to UI
+function addMessage(text, sender = "user") {
+  const msg = document.createElement("div");
+  msg.style.marginBottom = "10px";
+  msg.style.padding = "8px 10px";
+  msg.style.borderRadius = "8px";
+  msg.style.maxWidth = "80%";
+  msg.style.fontSize = "13px";
+
+  if (sender === "user") {
+    msg.style.background = "#1e40af";
+    msg.style.alignSelf = "flex-end";
+  } else {
+    msg.style.background = "#06b6d4";
+    msg.style.color = "#000";
+  }
+
+  msg.textContent = text;
+  chatMessages.appendChild(msg);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Send message
+chatSend.addEventListener("click", sendMessage);
+chatInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") sendMessage();
+});
+
+function sendMessage() {
+  const message = chatInput.value.trim();
+  if (!message) return;
+
+  addMessage(message, "user");
+  chatInput.value = "";
+
+  // Temporary fake AI reply
+  setTimeout(() => {
+    addMessage("AI is thinking...", "bot");
+  }, 600);
+}
