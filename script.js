@@ -82,6 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     chatMessages.appendChild(loading);
 
     try {
+      console.log("CHAT ROUTE HIT");
       const res = await fetch("https://portfolio-backend-3-t5w8.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
