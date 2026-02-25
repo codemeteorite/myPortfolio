@@ -219,6 +219,28 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
+    // Swipe Gestures
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe();
+    }, { passive: true });
+
+    const handleSwipe = () => {
+      const swipeThreshold = 50;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        nextSlide(true);
+      } else if (touchEndX > touchStartX + swipeThreshold) {
+        prevSlide();
+      }
+    };
+
     // Start the auto-slide
     startTimer();
   }
