@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => loader.remove(), 1000);
   }
 
+  // ================= PROACTIVE BACKEND WAKE-UP =================
+  // Start waking up the chat backend immediately on page load to minimize cold-start delay
+  fetch("https://portfolio-backend-3-t5w8.onrender.com/").catch(() => {
+    // Silent catch, we just want to trigger the wake-up
+  });
+
   // ================= MOBILE MENU =================
   const btn = document.getElementById("menuBtn");
   const menu = document.getElementById("mobileMenu");
