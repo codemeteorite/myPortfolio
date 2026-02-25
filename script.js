@@ -45,6 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
+  // Dynamic Placeholder Timer
+  // Change placeholder after 1 minute to indicate Abu is ready
+  setTimeout(() => {
+    chatInput.placeholder = "Talk with Abu";
+  }, 60000);
+
   // Initial greeting
   chatMessages.appendChild(createMessage("Hey! I am Abu 🙈 Yahiya's Non Existent Assistant! How can I be useful to you?", "bot"));
 
