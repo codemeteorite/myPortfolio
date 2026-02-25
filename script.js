@@ -39,9 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  chatMessages.style.display = "flex";
-  chatMessages.style.flexDirection = "column";
-
   // Initial greeting
   chatMessages.appendChild(createMessage("Hey! I am Abu 🙈 Yahiya's Non Existent Assistant! How can I be useful to you?", "bot"));
 
@@ -49,22 +46,28 @@ document.addEventListener("DOMContentLoaded", () => {
     chatBox.classList.toggle("chat-hidden");
   });
 
-  function createMessage(text, sender) {
+  function createMessage(text, sender, isTyping = false) {
     const msg = document.createElement("div");
-    msg.textContent = text;
-    msg.style.marginBottom = "10px";
-    msg.style.padding = "8px 12px";
-    msg.style.borderRadius = "12px";
-    msg.style.maxWidth = "80%";
+    msg.className = `chat-bubble ${sender === "user" ? "user-bubble" : "bot-bubble"}`;
 
-    if (sender === "user") {
-      msg.style.background = "#1e40af";
-      msg.style.color = "#fff";
-      msg.style.alignSelf = "flex-end";
+    if (isTyping) {
+      msg.innerHTML = `
+        <div class="typing-container">
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+          <div class="typing-dot"></div>
+        </div>
+      `;
     } else {
-      msg.style.background = "#06b6d4";
-      msg.style.color = "#000";
-      msg.style.alignSelf = "flex-start";
+      if (sender === "bot") {
+        // Link parsing for bot messages
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        msg.innerHTML = text.replace(urlRegex, (url) => {
+          return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: #1e40af; text-decoration: underline; font-weight: bold;">${url}</a>`;
+        });
+      } else {
+        msg.textContent = text;
+      }
     }
 
     return msg;
@@ -76,20 +79,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     chatMessages.appendChild(createMessage(message, "user"));
     chatInput.value = "";
+    chatMessages.scrollTop = chatMessages.scrollHeight;
 
-    const loading = createMessage("Thinking...", "bot");
-    loading.style.opacity = "0.6";
-    chatMessages.appendChild(loading);
+    const loadingBubble = createMessage("", "bot", true);
+    chatMessages.appendChild(loadingBubble);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    const startTime = Date.now();
 
     try {
       console.log("CHAT ROUTE HIT");
-      const res = await fetch("https://portfolio-backend-3-t5w8.onrender.com/chat", {
+      const fetchPromise = fetch("https://portfolio-backend-3-t5w8.onrender.com/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message })
       });
 
-      loading.remove();
+      // Wait for both the fetch and at least 2 seconds
+      const minWaitPromise = new Promise(resolve => setTimeout(resolve, 2000));
+      const [res] = await Promise.all([fetchPromise, minWaitPromise]);
+
+      loadingBubble.remove();
 
       if (res.status === 429 || res.status === 500) {
         chatMessages.appendChild(createMessage("Sorry, My Working Hours are done. I'll be back Tommorrow 😴", "bot"));
@@ -98,7 +108,12 @@ document.addEventListener("DOMContentLoaded", () => {
         chatMessages.appendChild(createMessage(data.reply || "No reply", "bot"));
       }
     } catch (err) {
-      loading.remove();
+      // Ensure we still wait if there's an error quickly
+      const elapsedTime = Date.now() - startTime;
+      if (elapsedTime < 2000) {
+        await new Promise(resolve => setTimeout(resolve, 2000 - elapsedTime));
+      }
+      loadingBubble.remove();
       chatMessages.appendChild(createMessage("Server sleeping. Try again.", "bot"));
     }
 
