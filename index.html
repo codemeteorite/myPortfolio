@@ -738,6 +738,279 @@
       color: #06b6d4 !important;
       text-shadow: 0 0 8px rgba(30, 64, 175, 0.4);
     }
+
+    /* Personal Photo Dump Carousel Styles */
+    #life {
+      background: rgba(10, 15, 30, 0.3);
+      border-top: 1px solid rgba(6, 182, 212, 0.1);
+      border-bottom: 1px solid rgba(6, 182, 212, 0.1);
+      overflow: hidden;
+    }
+
+    .carousel-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      height: 550px;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(6, 182, 212, 0.2);
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+      background: #0f172a;
+    }
+
+    .carousel-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      perspective: 1000px;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.3;
+      transform: scale(1.1) rotateY(15deg);
+      transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+      filter: grayscale(0.8) blur(8px);
+    }
+
+    /* Portrait Slide Refinement */
+    .carousel-slide.portrait-slide::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: var(--bg-url);
+      background-size: cover;
+      background-position: center;
+      filter: blur(30px) brightness(0.4);
+      z-index: 0;
+    }
+
+    .carousel-slide.portrait-slide img {
+      position: relative;
+      z-index: 1;
+      object-fit: contain;
+      opacity: 0.3;
+      padding: 40px;
+      box-sizing: border-box;
+      transform: scale(0.9) rotateY(15deg);
+      transition: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    @media (max-width: 768px) {
+      .carousel-slide.portrait-slide {
+        background: none !important;
+      }
+
+      .carousel-slide.portrait-slide img {
+        padding: 0 !important;
+        object-fit: cover !important;
+      }
+    }
+
+    .carousel-slide.active img {
+      opacity: 1;
+      transform: scale(1) rotateY(0deg);
+      filter: grayscale(0) blur(0);
+      animation: scannerReveal 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+    }
+
+    @keyframes scannerReveal {
+      0% {
+        clip-path: inset(0 0 100% 0);
+        opacity: 0;
+        filter: brightness(2) blue-shift(10px);
+      }
+
+      20% {
+        opacity: 0.5;
+        filter: brightness(1.5);
+      }
+
+      100% {
+        clip-path: inset(0 0 0 0);
+        opacity: 1;
+        filter: brightness(1);
+      }
+    }
+
+
+    .carousel-track.transitioning::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent 40%,
+          rgba(6, 182, 212, 0.8) 50%,
+          transparent 60%);
+      pointer-events: none;
+      animation: scannerBeam 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      z-index: 20;
+    }
+
+    @keyframes scannerBeam {
+      0% {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      20% {
+        opacity: 1;
+      }
+
+      80% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+    }
+
+    .carousel-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 40px;
+      background: linear-gradient(transparent, rgba(15, 23, 42, 0.95));
+      text-align: left;
+      z-index: 5;
+    }
+
+    .carousel-caption {
+      font-family: 'Space Mono', monospace;
+      color: #06b6d4;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s 0.2s cubic-bezier(0.23, 1, 0.32, 1);
+      display: inline-block;
+      padding: 4px 12px;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 4px;
+      border-left: 2px solid #06b6d4;
+    }
+
+    .carousel-title {
+      font-family: 'Orbitron', sans-serif;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 700;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: 0.6s 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+      text-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+      padding: 8px 16px;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(8px);
+      border-radius: 8px;
+      width: fit-content;
+    }
+
+    .carousel-slide.active .carousel-caption,
+    .carousel-slide.active .carousel-title {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+      transform: translateY(-50%);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .nav-btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      pointer-events: auto;
+      backdrop-filter: blur(10px);
+      transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-btn:hover {
+      background: #06b6d4;
+      border-color: #06b6d4;
+      color: #0f172a;
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+      transform: scale(1.1);
+    }
+
+    .carousel-indicators {
+      position: absolute;
+      bottom: 25px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 10;
+    }
+
+    .indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .indicator.active {
+      background: #06b6d4;
+      width: 35px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #06b6d4;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-wrapper {
+        height: 400px;
+        border-radius: 0;
+      }
+
+      .carousel-title {
+        font-size: 1.3rem;
+      }
+
+      .nav-btn {
+        width: 40px;
+        height: 40px;
+      }
+    }
   </style>
 </head>
 
@@ -838,6 +1111,8 @@
         </p>
       </div>
     </section>
+
+    <!-- The Life Behind the Code -->
 
     <!-- Skills -->
     <section id="skills" class="py-24 px-6 text-center reveal">
@@ -1347,6 +1622,102 @@
         </a>
 
       </div>
+
+      <!-- The Life Behind the Code -->
+      <section id="life" class="py-24 px-6 text-center reveal">
+        <h2 class="text-4xl md:text-5xl font-bold mb-10 glow-text">YAHIYA BEHIND CODE</h2>
+
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="carouselTrack">
+            <!-- Slide 1: Mentoring -->
+            <div class="carousel-slide active">
+              <img src="https://saifk.xyz/assets/journey-1.HR-PO1TQ.jpg" alt="Mentoring">
+              <div class="carousel-overlay">
+                <div class="carousel-caption">Mentoring</div>
+                <div class="carousel-title">Watering the seedlings</div>
+              </div>
+            </div>
+            <!-- Slide 2: Communication -->
+            <div class="carousel-slide">
+              <img
+                src="https://ik.imagekit.io/mohdyahiya001/portfolio/WhatsApp%20Image%202026-02-25%20at%2007.45.34.jpeg"
+                alt="Communication">
+              <div class="carousel-overlay">
+                <div class="carousel-caption">Communication</div>
+                <div class="carousel-title">"Selling yourself is the key to owning yourself" -the dev</div>
+              </div>
+            </div>
+            <!-- Slide 3: The Step -->
+            <div class="carousel-slide">
+              <img src="https://ik.imagekit.io/mohdyahiya001/portfolio/Screenshot%202025-12-03%20024916.png"
+                alt="The Step">
+              <div class="carousel-overlay">
+                <div class="carousel-caption">The Step</div>
+                <div class="carousel-title">Can never forget where we started from</div>
+              </div>
+            </div>
+            <!-- Slide 4: To Exist -->
+            <div class="carousel-slide">
+              <img src="https://ik.imagekit.io/mohdyahiya001/portfolio/image.png" alt="To Exist">
+              <div class="carousel-overlay">
+                <div class="carousel-caption">To Exist</div>
+                <div class="carousel-title">Showing Up whenever Required</div>
+              </div>
+            </div>
+            <!-- Slide 5: Recognition -->
+            <div class="carousel-slide">
+              <img
+                src="https://ik.imagekit.io/mohdyahiya001/portfolio/WhatsApp%20Image%202026-02-25%20at%2007.44.49.jpeg"
+                alt="Recognition">
+              <div class="carousel-overlay">
+                <div class="carousel-caption">Recognition</div>
+                <div class="carousel-title">Making them feel proud for their work</div>
+              </div>
+            </div>
+            <!-- Slide 6: Ride (Portrait Mode) -->
+            <div class="carousel-slide portrait-slide"
+              style="--bg-url: url('https://lh3.googleusercontent.com/d/1tc74HGRBspv5FCbFBoWIWfHUBgMiDb8k')">
+              <img src="https://lh3.googleusercontent.com/d/1tc74HGRBspv5FCbFBoWIWfHUBgMiDb8k" alt="Ride">
+              <div class="carousel-overlay">
+                <div class="carousel-caption">Ride</div>
+                <div class="carousel-title">Sometimes the Ride is better than the Destination</div>
+              </div>
+            </div>
+            <!-- Slide 7: Definition (Portrait Mode) -->
+            <div class="carousel-slide portrait-slide"
+              style="--bg-url: url('https://ik.imagekit.io/mohdyahiya001/portfolio/WhatsApp%20Image%202026-02-25%20at%2007.42.13.jpeg')">
+              <img
+                src="https://ik.imagekit.io/mohdyahiya001/portfolio/WhatsApp%20Image%202026-02-25%20at%2007.42.13.jpeg"
+                alt="Definition">
+              <div class="carousel-overlay">
+                <div class="carousel-caption">Definition</div>
+                <div class="carousel-title">Out there finding myself.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="carousel-nav">
+            <button class="nav-btn" id="prevBtn">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="nav-btn" id="nextBtn">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+
+          <!-- Indicators -->
+          <div class="carousel-indicators" id="carouselIndicators">
+            <div class="indicator active" data-index="0"></div>
+            <div class="indicator" data-index="1"></div>
+            <div class="indicator" data-index="2"></div>
+            <div class="indicator" data-index="3"></div>
+            <div class="indicator" data-index="4"></div>
+            <div class="indicator" data-index="5"></div>
+            <div class="indicator" data-index="6"></div>
+          </div>
+        </div>
+      </section>
 
       <p class="mt-16 text-base md:text-lg text-gray-400 font-bold uppercase tracking-wider">
         Let's build something <span class="text-blue-400 glow-text">IMPACTFUL</span>

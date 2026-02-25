@@ -129,4 +129,86 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // ================= PHOTO CAROUSEL =================
+  const track = document.getElementById('carouselTrack');
+  const nextButton = document.getElementById('nextBtn');
+  const prevButton = document.getElementById('prevBtn');
+  const indicatorsContainer = document.getElementById('carouselIndicators');
+
+  if (track && nextButton && prevButton && indicatorsContainer) {
+    const slides = Array.from(track.children);
+    const indicators = Array.from(indicatorsContainer.children);
+
+    // Preload all carousel images
+    const preloadCarouselImages = () => {
+      slides.forEach(slide => {
+        const img = slide.querySelector('img');
+        if (img && img.src) {
+          const newImg = new Image();
+          newImg.src = img.src;
+        }
+      });
+    };
+    preloadCarouselImages();
+
+    let currentIndex = 0;
+    let autoSlideTimer;
+
+    const updateSlides = (index) => {
+      // Add a transition effect class
+      track.classList.add('transitioning');
+
+      track.style.transform = `translateX(-${index * 100}%)`;
+
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+
+      indicators.forEach((indicator, i) => {
+        indicator.classList.toggle('active', i === index);
+      });
+
+      currentIndex = index;
+
+      // Remove the effect class after transition
+      setTimeout(() => {
+        track.classList.remove('transitioning');
+      }, 1000);
+    };
+
+    const nextSlide = (isManual = false) => {
+      let index = (currentIndex + 1) % slides.length;
+      updateSlides(index);
+      if (isManual) resetTimer();
+    };
+
+    const prevSlide = () => {
+      let index = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlides(index);
+      resetTimer();
+    };
+
+    const startTimer = () => {
+      autoSlideTimer = setInterval(nextSlide, 5000);
+    };
+
+    const resetTimer = () => {
+      clearInterval(autoSlideTimer);
+      startTimer();
+    };
+
+    nextButton.addEventListener('click', () => nextSlide(true));
+    prevButton.addEventListener('click', prevSlide);
+
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        updateSlides(index);
+        resetTimer();
+      });
+    });
+
+    // Start the auto-slide
+    startTimer();
+  }
+
 });
