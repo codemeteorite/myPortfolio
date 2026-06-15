@@ -1959,6 +1959,38 @@
             <div class="stat-number">2</div>
             <div class="stat-label">Internships</div>
           </div>
+
+          <div class="stat-card">
+  <div class="stat-number" id="visitor-count">0</div>
+  <div class="stat-label">Visitors</div>
+</div>
+
+<script>
+fetch("https://visitor-counter-api-s46z.onrender.com/visitors")
+  .then(res => res.json())
+  .then(data => {
+    const target = Number(data.count);
+    const counter = document.getElementById("visitor-count");
+
+    let current = 0;
+    const step = Math.ceil(target / 50);
+
+    const timer = setInterval(() => {
+      current += step;
+
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+
+      counter.textContent = current.toLocaleString();
+    }, 30);
+  })
+  .catch(() => {
+    document.getElementById("visitor-count").textContent = "N/A";
+  });
+</script>
+
           
           <div class="stat-card">
             <div class="stat-number">3+</div>
